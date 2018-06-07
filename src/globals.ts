@@ -7,8 +7,8 @@ export class Globals {
   public mylinks: Array<{name: string, link: string}> =
                   [
                     {name:"Home",     link:"#"},
-                    {name:"Github",   link:"github.com/msahil432"},
-                    {name:"LinkedIn", link:"linkedin.com/in/msahil432"},
-                    {name:"Twitter",  link:"twitter.com/msahil432"}
+                    {name:"Github",   link:"https://github.com/msahil432"},
+                    {name:"LinkedIn", link:"https://linkedin.com/in/msahil432"},
+                    {name:"Twitter",  link:"https://twitter.com/msahil432"}
                   ];
 }
