@@ -8,106 +8,25 @@
                 </div>
                 <div class="card-content" *ngFor="let item of globals.myExp">
                     <h3 class="title">{{item.company}}</h3>
-                    <p class="category">{{item.position}}</p>
+                    <p class="category">{{item.time}}</p>
                     <blockquote>{{item.details}}</blockquote>
-                </div>
-                <div class="card-header" data-background-color="red">
-                        <h4 class="title">Education</h4>
-                    </div>
-                    <div class="card-content">
-                        <h3 class="title">Maharaja Agrasen Institute of Technology</h3>
-                        <p class="category">Software Intern</p>
-                        <blockquote>6 Weeks <i>Paid</i> Internship in July 2017. Worked on two things, First comprised of a Java Servlet built using Jetty and finally deployed on AWS Instance. Second was a chrome Extension employing Bootstrap, Jquery but it was not published.</blockquote>
-                    </div>
-                <div class="card-header" data-background-color="red">
-                    <h4 class="title">Experience</h4>
-                </div>
-                <div class="card-content">
-                    <form>
-                        <div class="row">
-                            <div class="col-md-5">
-                                <div class="form-group form-black label-floating is-empty">
-                                    <label class="control-label">Company (disabled)</label>
-                                    <input type="text" class="form-control" disabled>
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="form-group form-black label-floating is-empty">
-                                    <label class="control-label">Username</label>
-                                    <input type="text" class="form-control" >
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="form-group form-black label-floating is-empty">
-                                    <label class="control-label">Email address</label>
-                                    <input type="email" class="form-control" >
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-group form-black label-floating is-empty">
-                                    <label class="control-label">Fist Name</label>
-                                    <input type="text" class="form-control" >
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group form-black label-floating is-empty">
-                                    <label class="control-label">Last Name</label>
-                                    <input type="text" class="form-control" >
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="form-group form-black label-floating is-empty">
-                                    <label class="control-label">Adress</label>
-                                    <input type="text" class="form-control" >
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="form-group form-black label-floating is-empty">
-                                    <label class="control-label">City</label>
-                                    <input type="text" class="form-control" >
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="form-group form-black label-floating is-empty">
-                                    <label class="control-label">Country</label>
-                                    <input type="text" class="form-control" >
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="form-group form-black label-floating is-empty">
-                                    <label class="control-label">Postal Code</label>
-                                    <input type="text" class="form-control" >
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="form-group">
-                                    <label>About Me</label>
-                                    <div class="form-group form-black label-floating is-empty">
-                                        <label class="control-label"> Lamborghini Mercy, Your chick she so thirsty, I'm in that two seat Lambo.</label>
-                                        <textarea class="form-control" rows="5"></textarea>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <button type="submit" class="btn btn-danger pull-right">Update Profile</button>
-                        <div class="clearfix"></div>
-                    </form>
                 </div>
             </div>
         </div>
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header" data-background-color="red">
+                        <h4 class="title">Education</h4>
+                    </div>
+                    <div class="card-content" *ngFor="let item of globals.myEdu">
+                            <h3 class="title">{{item.degree}}</h3>
+                            <h4 class="title">{{item.institute}}</h4>
+                            <p class="category">{{item.time}}</p>
+                            <blockquote>{{item.details}}</blockquote>
+                    </div>
+                </div>
+            </div>
+        </div>  
         <div class="col-md-4">
             <div class="card card-profile">
                 <div class="card-avatar">
