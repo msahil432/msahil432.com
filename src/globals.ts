@@ -9,7 +9,8 @@ export class Globals {
                     {name:"Home",     link:"#"},
                     {name:"Github",   link:"https://github.com/msahil432"},
                     {name:"LinkedIn", link:"https://linkedin.com/in/msahil432"},
-                    {name:"Twitter",  link:"https://twitter.com/msahil432"}
+                    {name:"Twitter",  link:"https://twitter.com/msahil432"},
+                    {name:"Download Resume",  link:"https://docs.google.com/document/d/113MXj2Hr4lWbFgM0MxR1oPWEg_jPWYu8nqU37IhO2T4/edit?usp=sharing"}
                   ];
   public myExp : Array<{company: string, time: string, details: string}> = 
                   [
