@@ -10,10 +10,6 @@ app.get('*', function(request, response) {
   response.sendFile(path.join(__dirname, 'dist/index.html'))
 })
 
-app.get('/r', function(request, response) {
-    response.send('Redirects, To be implemented soon!')
-})
-
 const server = http.createServer(app)
 server.listen(app.get('port'), function() {
   console.log("App is running at localhost:" + app.get('port'))
