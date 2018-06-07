@@ -6,11 +6,19 @@
                 <div class="card-header" data-background-color="red">
                     <h4 class="title">Experience</h4>
                 </div>
-                <div class="card-content">
-                    <h3 class="title">MyMovieRack</h3>
-                    <p class="category">Software Intern</p>
-                    <blockquote>6 Weeks paid Internship</blockquote>
+                <div class="card-content" *ngFor="let item of globals.myExp">
+                    <h3 class="title">{{item.company}}</h3>
+                    <p class="category">{{item.position}}</p>
+                    <blockquote>{{item.details}}</blockquote>
                 </div>
+                <div class="card-header" data-background-color="red">
+                        <h4 class="title">Education</h4>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="title">Maharaja Agrasen Institute of Technology</h3>
+                        <p class="category">Software Intern</p>
+                        <blockquote>6 Weeks <i>Paid</i> Internship in July 2017. Worked on two things, First comprised of a Java Servlet built using Jetty and finally deployed on AWS Instance. Second was a chrome Extension employing Bootstrap, Jquery but it was not published.</blockquote>
+                    </div>
                 <div class="card-header" data-background-color="red">
                     <h4 class="title">Experience</h4>
                 </div>
