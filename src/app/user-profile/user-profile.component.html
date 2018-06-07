@@ -47,19 +47,6 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header" data-background-color="red">
-                        <h4 class="title">Education</h4>
-                </div>
-                <div class="card-content" *ngFor="let item of globals.myEdu">
-                    <h3 class="title">{{item.degree}}</h3>
-                    <h4 class="title">{{item.institute}}</h4>
-                    <p class="category">{{item.time}}</p>
-                    <blockquote>{{item.details}}</blockquote>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header" data-background-color="red">
                     <h4 class="title">Qualifications</h4>
                 </div>
                 <div class="card-content" *ngFor="let item of globals.myQua">
@@ -95,7 +82,7 @@
                <div class="card-header" data-background-color="red">
                     <h4 class="title">Professional Memberships</h4>
                 </div>
-                <div class="card-content" *ngFor="let item of globals.myPro">
+                <div class="card-content" *ngFor="let item of globals.myMem">
                     <h3 class="title">{{item.name}}</h3>
                     <blockquote>{{item.details}}</blockquote>
                 </div>
