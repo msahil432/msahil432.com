@@ -34,4 +34,92 @@ export class Globals {
                     }
                   ];
   
+  public myQua : Array<{name: string, details: string}> = 
+                  [
+                    {
+                      name: "Core Java Certification, UC3Mx IT.1 : Edx.org",
+                      details: "Scored 71% in June 2017."
+                    },
+                    {
+                      name: "Industrial Training : MileStone Achievers Pvt. Ltd.",
+                      details: "Industrial Training in Advance Java in Jan - Feb 2016, as for Diploma requirements."
+                    }
+                  ];
+
+  public myAwa : Array<{name: string, details: string}> = 
+                  [
+                    {
+                      name: "Associate Member : Techsurge & Mridang 2018",
+                      details: "Techsurge & Mridang is the annual fest of MAIT. My role was event head in two events and event coordinator in three events."
+                    },
+                    {
+                      name: "Runner Up : VIPS Hackathon 2017",
+                      details: "Team of 3, presented Android Application and finished second in the Hackathon."
+                    }
+                  ];
+
+  public myExc : Array<{name: string, details: string}> = 
+                  [
+                    {
+                      name: "Event Head, HackMAIT : Techsurge & Mridang 2018",
+                      details: "Prizes worth total 25K, Sponsored by Coding Blocks. 7 Teams participated in 6 hour Hackathon."
+                    },
+                    {
+                      name: "Event Head, House of Quizzes: Techsurge & Mridang 2018",
+                      details: "Non Technical event based for TV shows."
+                    },
+                    {
+                      name: "Event Coordinator of 3 events : Techsurge & Mridang 2018",
+                      details: "Events were: Nostalgia Reloaded, Blur Gaming, LogoQuiz"
+                    },
+                    {
+                      name: "Event Coordinator, Coding Hell : GNDIT Fest 2016",
+                      details: "Multiple Choice Questionnaire consisting of Logical, Reasoning and Coding questions."
+                    }
+                  ];
+
+  public myMem : Array<{name: string, time: string}> =
+                  [
+                    {name: "Google Play Developer", time: ""},
+                    {name: "Beta Tester of many things: Windows Insider, Google Play Apps, etc.", time: ""}
+                  ];
+
+  public myPro : Array<{name: string, slogan: string, time: string, details: string, tech: Array<string>}> = 
+                  [
+                    {
+                      name:"Click-Away : Android Developer", slogan:"Now, Your safekeepers are just a click away", time: "Feb 2017", 
+                      details:"Built with one other friend within 24 hours, during Hackathon event of Delhi Technical University, HackDTU.",
+                      tech :[""]
+                    },
+                    {
+                      name:"", slogan:"", time: "",
+                      details:"", 
+                      tech :[""]
+                    },
+                    {
+                      name:"", slogan:"", time: "",
+                      details:"", 
+                      tech :[""]
+                    },
+                    {
+                      name:"", slogan:"", time: "", 
+                      details:"",
+                      tech :[""]
+                    },
+                    {
+                      name:"", slogan:"", time: "", 
+                      details:"",
+                      tech :[""]
+                    },
+                    {
+                      name:"", slogan:"", time: "", 
+                      details:"",
+                      tech :[""]
+                    },
+                    {
+                      name:"", slogan:"", time: "", 
+                      details:"",
+                      tech :[""]
+                    }
+                  ];
 }

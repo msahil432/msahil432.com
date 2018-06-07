@@ -13,6 +13,24 @@
                 </div>
             </div>
         </div>
+        <div class="col-md-4">
+            <div class="card card-profile">
+                <div class="card-avatar">
+                    <a href="#pablo">
+                        <img class="img" src="../assets/img/faces/marc.jpg" />
+                    </a>
+                </div>
+                <div class="content">
+                    <h6 class="category text-gray">Software Engineer</h6>
+                    <h4 class="card-title">Sahil Malik</h4>
+                    <p class="card-content">
+                        Everything can be improved. <br/> Similarly, Every Code can be Optimized.
+                    </p>
+                    <a href="https://twitter.com/msahil432?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false" data-show-screen-name="false" data-size="large">Follow</a>
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </div>
+            </div>
+        </div>
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header" data-background-color="red">
@@ -26,22 +44,60 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-4">
-            <div class="card card-profile">
-                <div class="card-avatar">
-                    <a href="#pablo">
-                        <img class="img" src="../assets/img/faces/marc.jpg" />
-                    </a>
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header" data-background-color="red">
+                        <h4 class="title">Education</h4>
                 </div>
-
-                <div class="content">
-                    <h6 class="category text-gray">Software Engineer</h6>
-                    <h4 class="card-title">Sahil Malik</h4>
-                    <p class="card-content">
-                        Everything can be improved. <br/> Similarly, Every Code can be Optimized.
-                    </p>
-                    <a href="https://twitter.com/msahil432?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false" data-show-screen-name="false" data-size="large">Follow</a>
-                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                <div class="card-content" *ngFor="let item of globals.myEdu">
+                    <h3 class="title">{{item.degree}}</h3>
+                    <h4 class="title">{{item.institute}}</h4>
+                    <p class="category">{{item.time}}</p>
+                    <blockquote>{{item.details}}</blockquote>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header" data-background-color="red">
+                    <h4 class="title">Qualifications</h4>
+                </div>
+                <div class="card-content" *ngFor="let item of globals.myQua">
+                    <h3 class="title">{{item.name}}</h3>
+                    <blockquote>{{item.details}}</blockquote>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header" data-background-color="red">
+                    <h4 class="title">Awards</h4>
+                </div>
+                <div class="card-content" *ngFor="let item of globals.myAwa">
+                    <h3 class="title">{{item.name}}</h3>
+                    <blockquote>{{item.details}}</blockquote>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div class="card">
+               <div class="card-header" data-background-color="red">
+                    <h4 class="title">Extra Curricular Activities</h4>
+                </div>
+                <div class="card-content" *ngFor="let item of globals.myExc">
+                    <h3 class="title">{{item.name}}</h3>
+                    <blockquote>{{item.details}}</blockquote>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div class="card">
+               <div class="card-header" data-background-color="red">
+                    <h4 class="title">Professional Memberships</h4>
+                </div>
+                <div class="card-content" *ngFor="let item of globals.myPro">
+                    <h3 class="title">{{item.name}}</h3>
+                    <blockquote>{{item.details}}</blockquote>
                 </div>
             </div>
         </div>
