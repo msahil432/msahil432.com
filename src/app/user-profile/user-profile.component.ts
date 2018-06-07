@@ -10,7 +10,7 @@ import {Globals} from '../../globals';
 })
 export class UserProfileComponent implements OnInit {
 
-  constructor() { }
+  constructor(public globals: Globals) { }
 
   ngOnInit() {
   }
