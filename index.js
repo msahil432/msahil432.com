@@ -1,7 +1,10 @@
+var compression = require('compression')
 var express = require('express')
 var app = express()
 const path = require('path')
 const http = require('http')
+
+app.use(compression())
 
 app.set('port', (process.env.PORT || 5000))
 app.use(express.static(__dirname + '/dist'))
