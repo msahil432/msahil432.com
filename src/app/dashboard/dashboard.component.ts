@@ -150,27 +150,30 @@ export class DashboardComponent implements OnInit {
 
       var t: Array<{ tech:string, used: number }> = [];
 
-    this.globals.myPro.forEach(function (el) {
-    el.tech.forEach(function (techs) { 
-        var found: boolean = false;
-        var index = 0;
-        t.forEach(function (s) {
-            if (s.tech == techs) {
-                found = true;
-                t.splice(index, 1);
-                t.push({ tech: techs, used: s.used + 1 });
-            }
-            index++;
-        })
-        if (!found) t.push({ tech: techs, used: 0 });
-    })
-});
+      this.globals.myPro.forEach(function (el) {
+            el.tech.forEach(function (techs) { 
+                var found: boolean = false;
+                var index = 0;
+                t.forEach(function (s) {
+                    if (s.tech == techs) {
+                        found = true;
+                        t.splice(index, 1);
+                        t.push({ tech: techs, used: s.used + 1 });
+                    }
+                    index++;
+                })
+                if (!found) t.push({ tech: techs, used: 0 });
+            })
+        });
 
-var rand: Array<{ tech: string, used: number }> = [
-    t[Math.floor(Math.random() * t.length)],
-    t[Math.floor(Math.random() * t.length)],
-    t[Math.floor(Math.random() * t.length)],
-    t[Math.floor(Math.random() * t.length)]
-];
-  }
+        var rand: Array<{ tech: string, used: number }> = [
+            t[Math.floor(Math.random() * t.length)],
+            t[Math.floor(Math.random() * t.length)],
+            t[Math.floor(Math.random() * t.length)],
+            t[Math.floor(Math.random() * t.length)]
+        ];
+
+        this.techs = rand;
+    }
+    public techs;
 }
