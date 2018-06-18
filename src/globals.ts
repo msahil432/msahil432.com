@@ -91,7 +91,7 @@ export class Globals {
                       name:"Click-Away", role: "Android Developer", slogan:"Now, Your safekeepers are just a click away",
                       time: "Feb 2017", link: "https://play.google.com/store/apps/details?id=msahil432.click_away",
                       details:"Built with one other friend within 24 hours, during Hackathon event of Delhi Technical University, HackDTU.",
-                      tech :["JAVA", "Android", "Google Location API", "SQLite","NodeJS", "MongoDB", "Javascript", "Heroku", "XML", "UX"]
+                      tech :["Java", "Android", "Google Location API", "SQLite","NodeJS", "MongoDB", "Javascript", "Heroku", "XML", "UX"]
                     },
                     {
                       name:"MyMovieRack.com", role: "Intern", slogan:"Paid Internship", 
@@ -121,7 +121,7 @@ export class Globals {
                       name:"Android Messages Organizer", role:"Android Developer", slogan:"SMS made easy",
                       time: "Currently Working",  link : "",
                       details:"Will be used to categorize SMS into various categories based on content using Machine Learning at Server, along with a Web Interface for accessing SMS online. There are other features too like timed SMS, OTP Copy, etc. Being created with one friend who manages Backend in Node.JS with MongoDB and Heroku Hosting.", 
-                      tech :["Android", "JAVA", "SQLite", "XML", "NodeJS", "HTML", "RestAPI", "ExpressJS", "MongoDB", "Heroku"]
+                      tech :["Android", "Java", "SQLite", "XML", "NodeJS", "HTML", "RestAPI", "ExpressJS", "MongoDB", "Heroku"]
                     },
                     {
                       name:"msahil432.com", role: "Web Engineer", slogan:"Online Profile",
