@@ -12,8 +12,14 @@
                             <p class="category">{{item.time}}</p>
                             <blockquote>{{item.details}}</blockquote>
                         </div>
-                        <div class="card-footer" *ngFor="let techs of item.tech">
-                            <span><small>{{techs}}</small></span>
+                        <div class="card-footer">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-md-4" *ngFor="let techs of item.tech">
+                                        <span><small>{{techs}}</small></span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
