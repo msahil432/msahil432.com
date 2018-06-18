@@ -5,11 +5,12 @@ import {Globals} from '../../globals';
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.css']
+  styleUrls: ['./dashboard.component.css'],
+  providers: [Globals]
 })
 export class DashboardComponent implements OnInit {
 
-  constructor(globals: Globals) { }
+  constructor(public globals: Globals) { }
   startAnimationForLineChart(chart){
       let seq: any, delays: any, durations: any;
       seq = 0;
@@ -149,7 +150,7 @@ export class DashboardComponent implements OnInit {
 
       var t: Array<{ tech:string, used: number }> = [];
 
-    Globals.myPro.forEach(function (el) {
+    this.globals.myPro.forEach(function (el) {
     el.tech.forEach(function (techs) { 
         var found: boolean = false;
         var index = 0;
