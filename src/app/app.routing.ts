@@ -20,7 +20,7 @@ const routes: Routes =[
     { path: 'icons',          component: IconsComponent },
     { path: 'maps',           component: MapsComponent },
     { path: 'notifications',  component: NotificationsComponent },
-    { path: 'upgrade',        component: UpgradeComponent },
+    { path: 'support',        component: UpgradeComponent },
     { path: '',               redirectTo: 'dashboard', pathMatch: 'full' }
 ];
 
