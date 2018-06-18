@@ -166,6 +166,7 @@ export class DashboardComponent implements OnInit {
             })
         });
 
+        //Display 4 technologies from projects
         var n=4;
         var result = new Array(n),
         len = t.length,
