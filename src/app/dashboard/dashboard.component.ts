@@ -162,18 +162,22 @@ export class DashboardComponent implements OnInit {
                     }
                     index++;
                 })
-                if (!found) t.push({ tech: techs, used: 0 });
+                if (!found) t.push({ tech: techs, used: 1 });
             })
         });
 
-        var rand: Array<{ tech: string, used: number }> = [
-            t[Math.floor(Math.random() * t.length)],
-            t[Math.floor(Math.random() * t.length)],
-            t[Math.floor(Math.random() * t.length)],
-            t[Math.floor(Math.random() * t.length)]
-        ];
+        var n=4;
+        var result = new Array(n),
+        len = t.length,
+        taken = new Array(len);
+        
+        while (n--) {
+            var x = Math.floor(Math.random() * len);
+            result[n] = t[x in taken ? taken[x] : x];
+            taken[x] = --len in taken ? taken[len] : len;
+        }
 
-        this.techs = rand;
+        this.techs = result;
     }
     public techs;
 }
