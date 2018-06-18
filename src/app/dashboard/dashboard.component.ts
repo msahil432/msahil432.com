@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import * as Chartist from 'chartist';
+import {Globals} from '../../globals';
 
 @Component({
   selector: 'app-dashboard',
@@ -8,7 +9,7 @@ import * as Chartist from 'chartist';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor() { }
+  constructor(globals: Globals) { }
   startAnimationForLineChart(chart){
       let seq: any, delays: any, durations: any;
       seq = 0;
@@ -146,5 +147,38 @@ export class DashboardComponent implements OnInit {
       //start animation for the Emails Subscription Chart
       this.startAnimationForBarChart(emailsSubscriptionChart);
   }
+
+  public t : Array<{tech : string, used: number}> = function(){
+    var t2 : Array<{tech : string, used: number}> = [
+      {tech: "", used: 0}
+    ];
+    return t2;
+  };
+
+  var t: Array<{ tech:string, used: number }> = [];
+
+  globals.myPro.forEach(function (el) {
+    el.tech.forEach(function (techs) { 
+        var found: boolean = false;
+        var index = 0;
+        t.forEach(function (s) {
+            if (s.tech == techs) {
+                found = true;
+                t.splice(index, 1);
+                console.log(index);
+                t.push({ tech: techs, used: s.used + 1 });
+            }
+            index++;
+        })
+        if (!found) t.push({ tech: techs, used: 0 });
+    })
+});
+
+var rand: Array<{ tech: string, used: number }> = [
+    t[Math.floor(Math.random() * t.length)],
+    t[Math.floor(Math.random() * t.length)],
+    t[Math.floor(Math.random() * t.length)],
+    t[Math.floor(Math.random() * t.length)]
+];
 
 }
