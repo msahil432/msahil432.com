@@ -10,5 +10,5 @@ git add .
 echo "-----------      ${RED} git commit - $1 ${NC} --------------"
 git commit -m "$1"
 
-echo "-----------      ${RED} git push heroku master ${NC}            --------------"
+echo "-----------      ${RED} git push heroku master ${NC}             --------------"
 git push heroku master
