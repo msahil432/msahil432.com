@@ -2,15 +2,14 @@
         <div class="logo-img">
             <img src="/assets/img/angular2-logo-red.png"/>
         </div>
-        {{globals.myname}}
+        <a href="https://fb.com/sahil432"><h2>{{globals.myname}}</h2></a>
 </div>
 <div class="sidebar-wrapper">
     <div class="nav-container">
         <ul class="nav navbar-nav">
             <li routerLinkActive="active" *ngFor="let menuItem of menuItems" class="{{menuItem.class}}">
                 <a  [routerLink]="[menuItem.path]">
-                    <i class="material-icons">{{menuItem.icon}}</i>
-                    <p>{{menuItem.title}}</p>
+                    <i class="material-icons">{{menuItem.icon}}</i><p>{{menuItem.title}}</p>
                 </a>
             </li>
         </ul>
