@@ -1,6 +1,10 @@
 {
   "name": "msahil432.com-webapp",
   "version": "1.4.2",
+  "engines": {
+    "node": "8.11.2",
+    "npm":"6.1.0"
+  },
   "license": "MIT",
   "main": "index.js",
   "scripts": {
