@@ -4,12 +4,6 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 
-import {
-    MatButtonModule,
-    MatRippleModule,
-    MatTooltipModule,
-  } from '@angular/material';
-
 import { AppRoutingModule } from './app.routing';
 import { ComponentsModule } from './components/components.module';
 
@@ -25,7 +19,7 @@ import { NotificationsComponent } from './notifications/notifications.component'
 import { UpgradeComponent } from './upgrade/upgrade.component';
 
 import {AgmCoreModule} from '@agm/core';
-
+  
 @NgModule({
       imports: [
         BrowserAnimationsModule,
@@ -33,9 +27,6 @@ import {AgmCoreModule} from '@agm/core';
         HttpModule,
         ComponentsModule,
         RouterModule,
-        MatButtonModule,
-        MatRippleModule,
-        MatTooltipModule,
         AppRoutingModule,
         AgmCoreModule.forRoot({
           apiKey: 'YOUR_GOOGLE_MAPS_API_KEY'
@@ -43,15 +34,6 @@ import {AgmCoreModule} from '@agm/core';
       ],
   declarations: [
     AppComponent,
-    DashboardComponent,
-    UserProfileComponent,
-    TableListComponent,
-    TypographyComponent,
-    IconsComponent,
-    MapsComponent,
-    NotificationsComponent,
-    UpgradeComponent,
-
   ],
   providers: [],
   bootstrap: [AppComponent]
