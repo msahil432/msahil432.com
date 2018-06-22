@@ -4,7 +4,7 @@
             <div *ngFor="let item of globals.myPro">
                 <div class="col-md-12">
                     <div class="card">
-                        <div class="card-header" data-background-color="red">
+                        <div class="card-header card-header-warning">
                             <h4 class="card-title">{{item.role}}</h4>
                         </div>
                         <div class="card-body">
@@ -16,7 +16,7 @@
                             <div class="container-fluid">
                                 <div class="row">
                                     <div class="col-md-4" *ngFor="let techs of item.tech">
-                                        <span>{{techs}}</span>
+                                        <span class="tech-span">{{techs}}</span>
                                     </div>
                                 </div>
                             </div>

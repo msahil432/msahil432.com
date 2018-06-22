@@ -1,26 +1,23 @@
 <div class="main-content">
     <div class="container-fluid">
         <div class="row">
-            <div *ngFor="let item of techs">
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="card card-stats" >
-                        <div class="card-header card-header-info">
-                            <div class="card-icon">
-                                <i class="material-icons">assignment_turned_in</i>  
-                            </div>    
-                            <p class="card-category">Technologies</p>
-                            <h3 class="card-title">{{item.tech}}</h3>
+            <div class="col-lg-3 col-md-6 col-sm-6" *ngFor="let item of techs">
+                <div class="card card-stats" >
+                    <div class="card-header card-header-info card-header-icon">
+                        <div class="card-icon">
+                            <i class="material-icons">assignment_turned_in</i>  
                         </div>
-                        <div class="card-footer">
-                            <div class="stats">
-                                <i class="material-icons text-danger">date_range</i> <a href="project-list">Used in {{item.used}} projects</a>
-                            </div>
+                        <p class="card-category">Technologies</p>
+                        <h3 class="card-title">{{item.tech}}</h3>
+                    </div>
+                    <div class="card-footer">
+                        <div class="stats">
+                            <i class="material-icons text-danger">date_range</i> <a href="project-list">Used in {{item.used}} projects</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
         <div class="row">
             <div class="col-md-4">
                 <div class="card" >
