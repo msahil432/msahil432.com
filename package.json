@@ -14,7 +14,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "postinstall": "ng build --aot --prod --build-optimizer --vendor-chunk --output-hashing all --source-maps false --named-chunks false"
+    "postinstall": "ng build --aot --prod --build-optimizer --vendor-chunk=true --output-hashing=all --extract-css=true --source-maps=false --named-chunks=false"
   },
   "dependencies": {
     "@agm/core": "1.0.0-beta.2",
