@@ -7,7 +7,7 @@ const http = require('http')
 app.use(compression())
 
 app.set('port', (process.env.PORT || 5000))
-app.use(express.static(__dirname + '/dist'))
+app.use(express.static(__dirname + '/dist', { maxAge: 86400000 }))
 
 app.get('*', function(request, response) {
   response.sendFile(path.join(__dirname, 'dist/index.html'))
