@@ -10,11 +10,13 @@
         "/*.bundle.css",
         "/*.bundle.js",
         "/*.chunk.js"
-      ],
-      "urls": [
-        {"url": "https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css"},
-        {"url": "https://fonts.googleapis.com/css?family=Roboto:400,700,300|Material+Icons"}
       ]
+    },
+    "external":{
+        "urls": [
+            {"url": "https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css"},
+            {"url": "https://fonts.googleapis.com/css?family=Roboto:400,700,300|Material+Icons"}
+        ]
     }
   }, {
     "name": "assets",
