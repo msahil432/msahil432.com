@@ -24,7 +24,8 @@
               "src/assets",
               "src/assets/sitemap.xml",
               "src/.htaccess",
-              "src/robots.txt"
+              "src/robots.txt",
+              "src/manifest.json"
             ],
             "styles": [
               "./src/styles.css",
@@ -55,12 +56,14 @@
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
-              "extractCss": true,
+              "extractCss": false,
               "namedChunks": false,
               "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
-              "buildOptimizer": true
+              "buildOptimizer": true,
+              "serviceWorker": true,
+              "ngswConfigPath": "src/ngsw-config.json"
             }
           }
         },

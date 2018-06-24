@@ -12,6 +12,8 @@ import {AgmCoreModule} from '@agm/core';
 import { AppComponent } from './app.component';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 
+import {ServiceWorkerModule} from '@angular/service-worker';
+
 @NgModule({
       imports: [
         BrowserAnimationsModule,
@@ -22,7 +24,8 @@ import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.compon
         AppRoutingModule,
         AgmCoreModule.forRoot({
           apiKey: 'AIzaSyAtRsBCSj7ftvdK9tglMRgKK3-S5dH-o0g'
-        })
+        }),
+        ServiceWorkerModule.register('/ngsw-worker.js', { enabled: true})
       ],
   declarations: [
     AppComponent,
