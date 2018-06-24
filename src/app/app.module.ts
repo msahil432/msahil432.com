@@ -25,7 +25,7 @@ import {ServiceWorkerModule} from '@angular/service-worker';
         AgmCoreModule.forRoot({
           apiKey: 'AIzaSyAtRsBCSj7ftvdK9tglMRgKK3-S5dH-o0g'
         }),
-        ServiceWorkerModule.register('/ngsw-worker.js', { enabled: true})
+        ServiceWorkerModule.register('/src/ngsw-worker.js', { enabled: true})
       ],
   declarations: [
     AppComponent,
