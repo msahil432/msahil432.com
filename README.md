@@ -1,11 +1,11 @@
-# [msahil432.com Website]
+# [msahil432.com - Online Profile] (http://msahil432.com)
 Based on **[Material Dashboard Angular](https://github.com/creativetimofficial/material-dashboard-angular2/)**
 
 Special thanks to [Creative Tim](https://github.com/creativetimofficial/) and other contributors for making this template.
 
 ## Links:
 
-+ [Live Preview](https://www.msahil432.com)
++ [Live Preview](http://www.msahil432.com)
 
 ## Quick start
 
@@ -13,7 +13,7 @@ Special thanks to [Creative Tim](https://github.com/creativetimofficial/) and ot
 
 ## Terminal Commands
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0 and angular 4.x.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0 and angular 4.x. (now updated to Angular 6)
 
 1. Install NodeJs from [NodeJs Official Page](https://nodejs.org/en).
 2. Open Terminal
@@ -27,5 +27,3 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## Useful Links
 
 More products from Creative Tim: <http://www.creative-tim.com/>
-
-[CHANGELOG]: ./CHANGELOG.md
