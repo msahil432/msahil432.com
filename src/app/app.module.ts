@@ -14,6 +14,8 @@ import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.compon
 
 import {ServiceWorkerModule} from '@angular/service-worker';
 
+import { AdsenseModule } from 'ng2-adsense';
+
 @NgModule({
       imports: [
         BrowserAnimationsModule,
@@ -24,6 +26,10 @@ import {ServiceWorkerModule} from '@angular/service-worker';
         AppRoutingModule,
         AgmCoreModule.forRoot({
           apiKey: 'AIzaSyAtRsBCSj7ftvdK9tglMRgKK3-S5dH-o0g'
+        }),
+        AdsenseModule.forRoot({
+          adClient: 'ca-pub-5745108171259405',
+          adSlot: 8883800760,
         }),
         ServiceWorkerModule.register('ngsw-worker.js', { enabled: true})
       ],
