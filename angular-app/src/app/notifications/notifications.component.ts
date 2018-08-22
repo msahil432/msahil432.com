@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+
+import { AdsenseModule } from 'ng2-adsense';
+
 declare var $: any;
 @Component({
   selector: 'app-notifications',

@@ -24,9 +24,6 @@ import { AdsenseModule } from 'ng2-adsense';
         ComponentsModule,
         RouterModule,
         AppRoutingModule,
-        AgmCoreModule.forRoot({
-          apiKey: 'AIzaSyAtRsBCSj7ftvdK9tglMRgKK3-S5dH-o0g'
-        }),
         AdsenseModule.forRoot({
           adClient: 'ca-pub-5745108171259405',
           adSlot: 8883800760,
@@ -35,9 +32,9 @@ import { AdsenseModule } from 'ng2-adsense';
       ],
   declarations: [
     AppComponent,
-    AdminLayoutComponent,
+    AdminLayoutComponent
   ],
-  providers: [],
+  providers: [AdsenseModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

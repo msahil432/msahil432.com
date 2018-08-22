@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import * as Chartist from 'chartist';
 import {Globals} from '../../globals';
 
+import { AdsenseModule } from 'ng2-adsense';
+
 declare var $: any;
 
 @Component({
@@ -91,7 +93,6 @@ export class DashboardComponent implements OnInit {
   ngOnInit() {
         //Show Notification
         if(!Globals.notified){
-            console.log(this.globals.notified);
             this.showNotification();
             Globals.notified=true;
         }

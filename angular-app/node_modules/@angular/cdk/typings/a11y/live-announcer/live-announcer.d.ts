@@ -10,8 +10,8 @@ import { ElementRef, NgZone, OnDestroy, Provider } from '@angular/core';
 /** Possible politeness levels. */
 export declare type AriaLivePoliteness = 'off' | 'polite' | 'assertive';
 export declare class LiveAnnouncer implements OnDestroy {
-    private _document;
     private readonly _liveElement;
+    private _document;
     constructor(elementToken: any, _document: any);
     /**
      * Announces a message to screenreaders.
@@ -39,7 +39,7 @@ export declare class CdkAriaLive implements OnDestroy {
     constructor(_elementRef: ElementRef, _liveAnnouncer: LiveAnnouncer, _contentObserver: ContentObserver, _ngZone: NgZone);
     ngOnDestroy(): void;
 }
-/** @docs-private @deprecated @deletion-target 7.0.0 */
+/** @docs-private @deprecated @breaking-change 7.0.0 */
 export declare function LIVE_ANNOUNCER_PROVIDER_FACTORY(parentDispatcher: LiveAnnouncer, liveElement: any, _document: any): LiveAnnouncer;
-/** @docs-private @deprecated @deletion-target 7.0.0 */
+/** @docs-private @deprecated @breaking-change 7.0.0 */
 export declare const LIVE_ANNOUNCER_PROVIDER: Provider;

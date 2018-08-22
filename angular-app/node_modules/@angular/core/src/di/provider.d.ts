@@ -115,15 +115,6 @@ export interface StaticClassProvider extends StaticClassSansProvider {
  * class MyService {}
  * ```
  *
- * @description
- * Configures the `Injector` to return an instance of a token.
- *
- * For more details, see the ["Dependency Injection Guide"](guide/dependency-injection).
- *
- * ### Example
- *
- * {@example core/di/ts/provider_spec.ts region='ConstructorSansProvider'}
- *
  * @experimental
  */
 export interface ConstructorSansProvider {
@@ -333,4 +324,4 @@ export interface ClassProvider extends ClassSansProvider {
  * @see `ClassProvider`
  * @see `StaticProvider`
  */
-export declare type Provider = TypeProvider | ValueProvider | ClassProvider | ExistingProvider | FactoryProvider | any[];
+export declare type Provider = TypeProvider | ValueProvider | ClassProvider | ConstructorProvider | ExistingProvider | FactoryProvider | any[];

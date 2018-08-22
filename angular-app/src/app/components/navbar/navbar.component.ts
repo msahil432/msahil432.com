@@ -3,6 +3,8 @@ import { ROUTES } from '../sidebar/sidebar.component';
 import {Location, LocationStrategy, PathLocationStrategy} from '@angular/common';
 import { Router } from '@angular/router';
 
+import { AdsenseModule } from 'ng2-adsense';
+
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',

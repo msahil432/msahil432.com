@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { AdsenseModule } from 'ng2-adsense';
+
 import {Globals} from '../../../globals';
 
 declare const $: any;

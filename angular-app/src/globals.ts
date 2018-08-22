@@ -11,10 +11,14 @@ export class Globals {
                     {name:"Github",   link:"https://github.com/msahil432"},
                     {name:"LinkedIn", link:"https://linkedin.com/in/msahil432"},
                     {name:"Twitter",  link:"https://twitter.com/msahil432"},
-                    {name:"Download Resume",  link:"https://docs.google.com/document/d/113MXj2Hr4lWbFgM0MxR1oPWEg_jPWYu8nqU37IhO2T4/edit?usp=sharing"}
+                    {name:"Resume",  link:"https://docs.google.com/document/d/113MXj2Hr4lWbFgM0MxR1oPWEg_jPWYu8nqU37IhO2T4/edit?usp=sharing"}
                   ];
   public myExp : Array<{company: string, time: string, details: string}> = 
                   [
+                    {
+                      company: "Android Intern, PenPencil", time: "July 2018 - 8 Weeks",
+                      details:"Worked as Android Application Developer for In-Office internship of 8 Weeks, with a stipend of Rs. 5000. Worked on 3 Android Projects."
+                    },
                     {
                       company: "Software Intern, MyMovieRack.com", time: "July 2017 - 6 Weeks",
                       details:"Worked on two things, First comprised of a Java Servlet built using Jetty and finally deployed on AWS Instance. Second was a chrome Extension employing Bootstrap, Jquery but it was not published."
@@ -38,6 +42,14 @@ export class Globals {
   
   public myQua : Array<{name: string, details: string}> = 
                   [
+                    {
+                      name: "Android Kotlin Developer, Udemy",
+                      details: "18 Hours of course by Hussein Al. Rubaye, in June 2018"
+                    },
+                    {
+                      name: "Android O & Java - Mobile App Development | Beginning to End, Udemy",
+                      details: "Completed 21 Hours of course by Philipp Muellauer, in Aug 2018"
+                    },
                     {
                       name: "Core Java Certification, UC3Mx IT.1 : Edx.org",
                       details: "Scored 71% in June 2017."

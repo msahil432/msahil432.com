@@ -1,3 +1,10 @@
+/**
+ * @license
+ * Copyright Google Inc. All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
 import { Observable } from 'rxjs';
 import { AsyncValidatorFn, ValidationErrors, ValidatorFn } from './directives/validators';
 /**
@@ -330,7 +337,7 @@ export declare abstract class AbstractControl {
         onlySelf?: boolean;
         emitEvent?: boolean;
     }): void;
-    private _updateAncestors(opts);
+    private _updateAncestors;
     /**
      * @param parent Sets the parent of the control
      */
@@ -365,10 +372,10 @@ export declare abstract class AbstractControl {
         onlySelf?: boolean;
         emitEvent?: boolean;
     }): void;
-    private _setInitialStatus();
-    private _runValidator();
-    private _runAsyncValidator(emitEvent?);
-    private _cancelExistingSubscription();
+    private _setInitialStatus;
+    private _runValidator;
+    private _runAsyncValidator;
+    private _cancelExistingSubscription;
     /**
      * Sets errors on a form control when running validations manually, rather than automatically.
      *
@@ -434,7 +441,7 @@ export declare abstract class AbstractControl {
      * Retrieves the top-level ancestor of this control.
      */
     readonly root: AbstractControl;
-    private _calculateStatus();
+    private _calculateStatus;
 }
 /**
  * Tracks the value and validation status of an individual form control.
@@ -455,31 +462,31 @@ export declare abstract class AbstractControl {
  * Instantiate a `FormControl`, with an initial value.
  *
  * ```ts
- * const ctrl = new FormControl('some value');
- * console.log(ctrl.value);     // 'some value'
+ * const control = new FormControl('some value');
+ * console.log(control.value);     // 'some value'
  *```
  *
  * The following example initializes the control with a form state object. The `value`
  * and `disabled` keys are required in this case.
  *
  * ```ts
- * const ctrl = new FormControl({ value: 'n/a', disabled: true });
- * console.log(ctrl.value);     // 'n/a'
- * console.log(ctrl.status);    // 'DISABLED'
+ * const control = new FormControl({ value: 'n/a', disabled: true });
+ * console.log(control.value);     // 'n/a'
+ * console.log(control.status);    // 'DISABLED'
  * ```
  *
  * The following example initializes the control with a sync validator.
  *
  * ```ts
- * const ctrl = new FormControl('', Validators.required);
- * console.log(ctrl.value);      // ''
- * console.log(ctrl.status);     // 'INVALID'
+ * const control = new FormControl('', Validators.required);
+ * console.log(control.value);      // ''
+ * console.log(control.status);     // 'INVALID'
  * ```
  *
  * The following example initializes the control using an options object.
  *
  * ```ts
- * const ctrl = new FormControl('', {
+ * const control = new FormControl('', {
  *    validators: Validators.required,
  *    asyncValidators: myAsyncValidator
  * });
@@ -490,7 +497,7 @@ export declare abstract class AbstractControl {
  * Set the `updateOn` option to `'blur'` to update on the blur `event`.
  *
  * ```ts
- * const ctrl = new FormControl('', { updateOn: 'blur' });
+ * const control = new FormControl('', { updateOn: 'blur' });
  * ```
  *
  * ### Configure the control to update on a submit event
@@ -498,7 +505,7 @@ export declare abstract class AbstractControl {
  * Set the `updateOn` option to `'submit'` to update on a submit `event`.
  *
  * ```ts
- * const ctrl = new FormControl('', { updateOn: 'submit' });
+ * const control = new FormControl('', { updateOn: 'submit' });
  * ```
  *
  * ### Reset the control back to an initial value
@@ -508,7 +515,7 @@ export declare abstract class AbstractControl {
  * (these are the only two properties that cannot be calculated).
  *
  * ```ts
- * const ctrl = new FormControl('Nancy');
+ * const control = new FormControl('Nancy');
  *
  * console.log(control.value); // 'Nancy'
  *
@@ -520,24 +527,23 @@ export declare abstract class AbstractControl {
  * ### Reset the control back to an initial value and disabled
  *
  * ```
- * const ctrl = new FormControl('Nancy');
+ * const control = new FormControl('Nancy');
  *
  * console.log(control.value); // 'Nancy'
- * console.log(this.control.status); // 'DISABLED'
+ * console.log(control.status); // 'VALID'
  *
  * control.reset({ value: 'Drew', disabled: true });
  *
- * console.log(this.control.value); // 'Drew'
- * console.log(this.control.status); // 'DISABLED'
+ * console.log(control.value); // 'Drew'
+ * console.log(control.status); // 'DISABLED'
  *
 */
 export declare class FormControl extends AbstractControl {
     /**
     * Creates a new `FormControl` instance.
     *
-    * @param formState Initializes the control with an initial state value,
-    * or with an object that defines the initial value, status, and options
-    * for handling updates and validation.
+    * @param formState Initializes the control with an initial value,
+    * or an object that defines the initial value and disabled state.
     *
     * @param validatorOrOpts A synchronous validator function, or an array of
     * such functions, or an `AbstractControlOptions` object that contains validation functions
@@ -595,9 +601,8 @@ export declare class FormControl extends AbstractControl {
      * Resets the form control, marking it `pristine` and `untouched`, and setting
      * the value to null.
      *
-     * @param formState Initializes the control with an initial state value,
-     * or with an object that defines the initial value, status, and options
-     * for handling updates and validation.
+     * @param formState Resets the control with an initial value,
+     * or an object that defines the initial value and disabled state.
      *
      * @param options Configuration options that determine how the control propagates changes
      * and emits events after the value changes.
@@ -626,7 +631,7 @@ export declare class FormControl extends AbstractControl {
      * @param fn The method that is called when the disabled status changes.
      */
     registerOnDisabledChange(fn: (isDisabled: boolean) => void): void;
-    private _applyFormState(formState);
+    private _applyFormState;
 }
 /**
  * Tracks the value and validity state of a group of `FormControl` instances.
@@ -849,9 +854,8 @@ export declare class FormGroup extends AbstractControl {
      * is a standalone value or a form state object with both a value and a disabled
      * status.
      *
-     * @param value Initializes the control with an initial state value,
-     * or with an object that defines the initial value, status,
-     * and options for handling updates and validation.
+     * @param formState Resets the control with an initial value,
+     * or an object that defines the initial value and disabled state.
      *
      * @param options Configuration options that determine how the control propagates changes
      * and emits events when the group is reset.
@@ -1158,5 +1162,5 @@ export declare class FormArray extends AbstractControl {
      * For enabled controls only, the `value` property is the best way to get the value of the array.
      */
     getRawValue(): any[];
-    private _registerControl(control);
+    private _registerControl;
 }

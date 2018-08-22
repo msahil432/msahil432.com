@@ -6,6 +6,8 @@ import { Router, NavigationEnd, NavigationStart } from '@angular/router';
 import { Subscription } from 'rxjs/Subscription';
 import PerfectScrollbar from 'perfect-scrollbar';
 
+import { AdsenseModule } from 'ng2-adsense';
+
 @Component({
   selector: 'app-admin-layout',
   templateUrl: './admin-layout.component.html',
