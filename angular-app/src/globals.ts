@@ -101,6 +101,12 @@ export class Globals {
   public myPro : Array<{name: string, role: string, slogan: string, time: string, details: string, link: String, tech: Array<string>}> = 
                   [
                     {
+                      name:"PenPencil - Internship", role: "Android Developer", slogan:"In Office Internship with stipend",
+                      time: "Aug 2018 - Sept 2018", link: "https://drive.google.com/open?id=1iGH9i8jvS92_jgNQITqTXjQvhDHsA1bu",
+                      details:"Worked on two Applications: ABI Champions And an E-Commerce Application",
+                      tech :["Java", "Android", "Google Location API", "SQLite", "XML", "UX", "Kotlin", "Android Jetpack"]
+                    },
+                    {
                       name:"Click-Away", role: "Android Developer", slogan:"Now, Your safekeepers are just a click away",
                       time: "Feb 2017", link: "https://play.google.com/store/apps/details?id=msahil432.click_away",
                       details:"Built with one other friend within 24 hours, during Hackathon event of Delhi Technical University, HackDTU.",
@@ -108,13 +114,13 @@ export class Globals {
                     },
                     {
                       name:"MyMovieRack.com", role: "Intern", slogan:"Paid Internship", 
-                      time: "July 2017 - August 2017", link : "",
+                      time: "July 2017 - August 2017", link : "https://drive.google.com/open?id=0B6HsKe5HQiFyRkpHVjNheG12NEU",
                       details:"Worked on two things, First comprised of a Java Servlet built using Jetty and finally deployed on AWS Instance. Second was a chrome Extension employing Bootstrap, Jquery but it was not published.",
                       tech :["Java", "AWS", "Git", "Jetty", "Tomcat", "Javascript", "JQuery", "YouTube API", "IntelliJ IDEA"]
                     },
                     {
                       name:"ML.Player", role:"Software Engineer", slogan:"The Player which Adapts", 
-                      time: "Jan 2016 - March 2017",  link : "",
+                      time: "Jan 2016 - March 2017",  link : "#",
                       details:"A Desktop Application written in Java for Music, with Welcome, Reset and Playlist (using XML) capabilities. Developed as a portable application so that all OS are supported. It was submitted as Final Project in Polytechnic Diploma at GNDIT.", 
                       tech :["Java", "Swing", "JDOM", "XML", "UX"]
                     },
@@ -126,13 +132,13 @@ export class Globals {
                     },
                     {
                       name:"QuizApp", role : "Backend Developer", slogan:"", 
-                      time: "Jan 2017",  link : "",
+                      time: "Jan 2017",  link : "#",
                       details:"A Web Application created with Meteor.JS for Coding Blocks’ Hackathon at IIT, Delhi in 2016. As the name suggests, it was created for playing quizzes. There were total 3 members in the team, from which I did the backend part.", 
                       tech :["MeteorJS", "MongoDB", "Javascript"]
                     },
                     {
                       name:"Android Messages Organizer", role:"Android Developer", slogan:"SMS made easy",
-                      time: "Currently Working",  link : "",
+                      time: "Currently Working",  link : "#",
                       details:"Will be used to categorize SMS into various categories based on content using Machine Learning at Server, along with a Web Interface for accessing SMS online. There are other features too like timed SMS, OTP Copy, etc. Being created with one friend who manages Backend in Node.JS with MongoDB and Heroku Hosting.", 
                       tech :["Android", "Java", "SQLite", "XML", "NodeJS", "HTML", "RestAPI", "ExpressJS", "MongoDB", "Heroku"]
                     },
@@ -140,7 +146,7 @@ export class Globals {
                       name:"msahil432.com", role: "Web Engineer", slogan:"Online Profile",
                       time: "Currrently Working",  link : "http://www.msahil432.com",
                       details:"Building as Online CV using Angular along with Express for RestAPI.", 
-                      tech :["Angular", "NodeJS", "ExpressJS", "Javascript", "SEO", "HTML", "CSS", "Material Design"]
+                      tech :["Angular", "NodeJS", "ExpressJS", "Javascript", "SEO", "HTML", "CSS", "Material Design", "AWS", "Web Hosting"]
                     }
                   ];
 }
