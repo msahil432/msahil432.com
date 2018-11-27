@@ -4,6 +4,8 @@ import {Globals} from '../../globals';
 
 import { AdsenseModule } from 'ng2-adsense';
 
+import { NgxTwitterTimelineModule } from 'ngx-twitter-timeline';
+
 @Component({
   selector: 'app-user-profile',
   templateUrl: './user-profile.component.html',

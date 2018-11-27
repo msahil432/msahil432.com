@@ -7,6 +7,8 @@ import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.compon
 
 import { AdsenseModule } from 'ng2-adsense';
 
+import { NgxTwitterTimelineModule } from 'ngx-twitter-timeline';
+
 const routes: Routes =[
   {
     path: '',
@@ -28,7 +30,9 @@ const routes: Routes =[
   imports: [
     CommonModule,
     BrowserModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    AdsenseModule,
+    NgxTwitterTimelineModule.forRoot()
   ],
   exports: [
   ],

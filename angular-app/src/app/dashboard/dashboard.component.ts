@@ -92,9 +92,9 @@ export class DashboardComponent implements OnInit {
   };
   ngOnInit() {
         //Show Notification
-        if(!Globals.notified){
+        if(!this.globals.notified){
             this.showNotification();
-            Globals.notified=true;
+            this.globals.notified=true;
         }
 
       /* ----------==========     Daily Sales Chart initialization For Documentation    ==========---------- */

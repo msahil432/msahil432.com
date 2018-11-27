@@ -16,6 +16,8 @@ import {ServiceWorkerModule} from '@angular/service-worker';
 
 import { AdsenseModule } from 'ng2-adsense';
 
+import { NgxTwitterTimelineModule } from 'ngx-twitter-timeline';
+
 @NgModule({
       imports: [
         BrowserAnimationsModule,
@@ -28,13 +30,14 @@ import { AdsenseModule } from 'ng2-adsense';
           adClient: 'ca-pub-5745108171259405',
           adSlot: 8883800760,
         }),
-        ServiceWorkerModule.register('ngsw-worker.js', { enabled: true})
+        ServiceWorkerModule.register('ngsw-worker.js', { enabled: true}),
+        NgxTwitterTimelineModule
       ],
   declarations: [
     AppComponent,
     AdminLayoutComponent
   ],
-  providers: [AdsenseModule],
+  providers: [AdsenseModule, NgxTwitterTimelineModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
