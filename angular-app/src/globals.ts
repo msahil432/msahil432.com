@@ -5,13 +5,21 @@ export class Globals {
   public notified: boolean = false;
   public myname: string = 'Sahil Malik';
   public mytag: string = "Getting Things Done!";
-  public mylinks: Array<{name: string, link: string}> =
-                  [
-                    {name:"Home",     link:"#"},
-                    {name:"Github",   link:"https://github.com/msahil432"},
+  public myMoto: string = "Everything can be improved. Similarly, Every Code can be Optimised.";
+  public myQualities: Array<string> = [
+    "Hard Working", "Can Work under Pressure", "Tech Savy", "Honest", "Friendly and Team Member", "Loves Astrophysics"
+  ];
+  public mySocio: Array<{name: string, link:string}> = [
                     {name:"LinkedIn", link:"https://linkedin.com/in/msahil432"},
-                    {name:"Twitter",  link:"https://twitter.com/msahil432"},
-                    {name:"Resume",  link:"https://docs.google.com/document/d/113MXj2Hr4lWbFgM0MxR1oPWEg_jPWYu8nqU37IhO2T4/edit?usp=sharing"}
+                    {name:"Stack Overflow", link:"https://stackoverflow.com/users/5634251/sahil-malik"},
+                    {name:"Github", link:"https://github.com/msahil432"},
+                    {name:"Gitlab", link:"https://gitlab.com/msahil432"},
+                    {name:"Twitter", link:"https://twitter.com/msahil432"}
+                  ];
+  public mylinks: Array<{name: string, link: string}> =[
+                    {name:"Back to Top", link:"#"},
+                    {name:"Download Resume", link:"https://docs.google.com/document/d/113MXj2Hr4lWbFgM0MxR1oPWEg_jPWYu8nqU37IhO2T4/edit?usp=sharing"},
+                    {name:"Download CV", link:"https://docs.google.com/document/d/1L_szbFSCBKEmo5lwnbod18iauyczcnRUFhuXXp4h19o/edit?usp=sharing"},
                   ];
   public myExp : Array<{company: string, time: string, details: string}> = 
                   [
@@ -27,15 +35,15 @@ export class Globals {
   public myEdu : Array<{institute: string, degree: string, time: string, details: string}> = 
                   [
                     {
-                      institute: "Maharaja Agrasen Institute of Technology, Delhi", degree: "B. Tech - CSE ", time : "2016-19 - Lateral Entry",
+                      institute: "Maharaja Agrasen Institute of Technology, Delhi", degree: "Bachelor of Technology - Computer Science & Engineering ", time : "2016 - 2019",
                       details: "Affialted to Guru Gobind Singh Indraprastha University, Delhi. 74% aggregate."
                     },
                     {
-                      institute: "Guru Nanak Dev Institute of Technology, Delhi", degree: "Polytechnic Diploma - Computer Engg.", time : "2013-16",
-                      details: "Passed with Merit (80%), A Delhi Union Territory government owned college, affiliated to Board of Technical Education, Delhi for Polytechnic Diploma."
+                      institute: "Guru Nanak Dev Institute of Technology, Delhi", degree: "Polytechnic Diploma - Computer Engineering.", time : "2013 - 2016",
+                      details: "Passed with Merit (80%), Delhi National Capital Territory, Delhi Government owned college, affiliated to Board of Technical Education, Delhi for Polytechnic Diploma and Degrees."
                     },
                     {
-                      institute: "T.N. Public School, Krishan Vihar, Delhi", degree: "10th Class", time : "2013",
+                      institute: "T.N. Public School, Krishan Vihar, Delhi", degree: "Secondary Education, Matriculation (10th Class)", time : "Completed in 2013",
                       details: "Scored 9.8 CGPA, a private school affiliated to Central Board of Secondary Education, India."
                     }
                   ];
@@ -92,14 +100,12 @@ export class Globals {
                     }
                   ];
 
-  public myMem : Array<{name: string, time: string}> =
-                  [
+  public myMem : Array<{name: string, time: string}> =[
                     {name: "Google Play Developer", time: ""},
-                    {name: "Beta Tester of many things: Windows Insider, Google Play Apps, etc.", time: ""}
+                    {name: "Beta Testing Groups", time: ""}
                   ];
 
-  public myPro : Array<{name: string, role: string, slogan: string, time: string, details: string, link: String, tech: Array<string>}> = 
-                  [
+  public myPro : Array<{name: string, role: string, slogan: string, time: string, details: string, link: String, tech: Array<string>}> = [
                     {
                       name:"PenPencil - Internship", role: "Android Developer", slogan:"In Office Internship with stipend",
                       time: "Aug 2018 - Sept 2018", link: "https://drive.google.com/open?id=1iGH9i8jvS92_jgNQITqTXjQvhDHsA1bu",

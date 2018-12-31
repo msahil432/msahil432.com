@@ -3,6 +3,8 @@ import { ROUTES } from '../sidebar/sidebar.component';
 import {Location, LocationStrategy, PathLocationStrategy} from '@angular/common';
 import { Router } from '@angular/router';
 
+import {Globals} from '../../../globals';
+
 import { AdsenseModule } from 'ng2-adsense';
 
 @Component({

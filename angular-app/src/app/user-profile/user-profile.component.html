@@ -1,88 +1,130 @@
 <div class="main-content">
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header card-header-danger">
-                    <h4 class="title">Experience</h4>
-                </div>
-                <div class="card-body" *ngFor="let item of globals.myExp">
-                    <h3 class="title">{{item.company}}</h3>
-                    <p class="category">{{item.time}}</p>
-                    <blockquote>{{item.details}}</blockquote>
-                </div>
+    <div class="container-fluid">
+        
+        <!-- Some Bakwaas Stuff -->
+        <div class="card">
+            <div class="card-header card-header-warning">
+                <h4 class="card-title">About Me</h4>
             </div>
-            <div class="card">
-                <div class="card-header card-header-danger">
-                        <h4 class="title">Education</h4>
-                </div>
-                <div class="card-body" *ngFor="let item of globals.myEdu">
-                    <h3 class="title">{{item.degree}}</h3>
-                    <h4 class="title">{{item.institute}}</h4>
-                    <p class="category">{{item.time}}</p>
-                    <blockquote>{{item.details}}</blockquote>
-                </div>
+            <div class="card-body">
+                <h3 class="title">My Moto</h3>
+                <blockquote>{{globals.myMoto}}</blockquote>
             </div>
-            <div class="card">
-                <div class="card-header card-header-danger">
-                    <h4 class="title">Certifications</h4>
-                </div>
-                <div class="card-body" *ngFor="let item of globals.myQua">
-                    <h3 class="title">{{item.name}}</h3>
-                    <blockquote>{{item.details}}</blockquote>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-header  card-header-danger">
-                    <h4 class="title">Awards</h4>
-                </div>
-                <div class="card-body" *ngFor="let item of globals.myAwa">
-                    <h3 class="title">{{item.name}}</h3>
-                    <blockquote>{{item.details}}</blockquote>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-header  card-header-danger">
-                    <h4 class="title">Extra Curricular Activities</h4>
-                </div>
-                <div class="card-body" *ngFor="let item of globals.myExc">
-                    <h3 class="title">{{item.name}}</h3>
-                    <blockquote>{{item.details}}</blockquote>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-header card-header-danger">
-                    <h4 class="title">Professional Memberships</h4>
-                </div>
-                <div class="card-body" *ngFor="let item of globals.myMem">
-                    <h3 class="title">{{item.name}}</h3>
-                    <blockquote>{{item.details}}</blockquote>
+            <div class="card-footer">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-4" *ngFor="let quality of globals.myQualities">
+                            <span class="tech-span">{{quality}}</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="col-md-4">
-            <div class="card card-profile">
-                <div class="card-avatar">
-                    <a href="https://fb.com/sahil432">
-                        <img class="img" src="../assets/img/faces/marc.jpg" alt="Sahil Malik's Photo"/>
-                    </a>
-                </div>
-                <div class="content">
-                    <h6 class="card-category text-gray">Software Engineer</h6>
-                    <h4 class="card-title">Sahil Malik</h4>
-                    <p class="card-description">
-                        Everything can be improved. <br/> Similarly, Every Code can be Optimised.
-                    </p>
-                    <a  href="https://docs.google.com/document/d/1L_szbFSCBKEmo5lwnbod18iauyczcnRUFhuXXp4h19o/edit?usp=sharing">
-                        <i class="material-icons">library_books</i>
-                        <p>Download CV</p>
-                    </a>
-                    <br/>
-                    <a class="twitter-timeline" href="https://twitter.com/msahil432?ref_src=twsrc%5Etfw">Twitter</a>
-                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-                </div>
+
+        <!-- Profile Details -->
+
+        <div class="card">
+            <div class="card-header card-header-danger">
+                <h4 class="title">Experience</h4>
+            </div>
+            <div class="card-body" *ngFor="let item of globals.myExp">
+                <h3 class="title">{{item.company}}</h3>
+                <p class="category">{{item.time}}</p>
+                <blockquote>{{item.details}}</blockquote>
             </div>
         </div>
+        <div class="card">
+            <div class="card-header card-header-danger">
+                    <h4 class="title">Education</h4>
+            </div>
+            <div class="card-body" *ngFor="let item of globals.myEdu">
+                <h3 class="title">{{item.degree}}</h3>
+                <h4 class="title">{{item.institute}}</h4>
+                <p class="category">{{item.time}}</p>
+                <blockquote>{{item.details}}</blockquote>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header card-header-danger">
+                <h4 class="title">Certifications</h4>
+            </div>
+            <div class="card-body" *ngFor="let item of globals.myQua">
+                <h3 class="title">{{item.name}}</h3>
+                <blockquote>{{item.details}}</blockquote>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header  card-header-danger">
+                <h4 class="title">Awards</h4>
+            </div>
+            <div class="card-body" *ngFor="let item of globals.myAwa">
+                <h3 class="title">{{item.name}}</h3>
+                <blockquote>{{item.details}}</blockquote>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header  card-header-danger">
+                <h4 class="title">Extra Curricular Activities</h4>
+            </div>
+            <div class="card-body" *ngFor="let item of globals.myExc">
+                <h3 class="title">{{item.name}}</h3>
+                <blockquote>{{item.details}}</blockquote>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header card-header-danger">
+                <h4 class="title">Professional Memberships</h4>
+            </div>
+            <div class="card-body" *ngFor="let item of globals.myMem">
+                <h3 class="title">{{item.name}}</h3>
+                <blockquote>{{item.details}}</blockquote>
+            </div>
+        </div>
+        
+        
+        <h3>Here are my projects:</h3>
+        
+        <div *ngFor="let item of globals.myPro">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header card-header-warning">
+                            <h4 class="card-title">{{item.role}}</h4>
+                        </div>
+                        <div class="card-body">
+                            <a href="{{item.link}}"><h3 class="title">{{item.name}}</h3></a>
+                            <h4>{{item.slogan}}</h4>
+                            <p class="category">{{item.time}}</p>
+                            <blockquote>{{item.details}}</blockquote>
+                        </div>
+                        <div class="card-footer">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-md-4" *ngFor="let techs of item.tech">
+                                        <span class="tech-span">{{techs}}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h3>Here are live projects:</h3>
+
+            <div class="card card-stats">
+                    <div class="card-header card-header-success card-header-icon">
+                            <div class="card-icon">
+                                    <i class="material-icons">android</i>
+                            </div>
+                            <p class="card-category">Install app</p>
+                            <h3 class="card-title">Click-Away</h3>
+                    </div>
+                    <div class="card-footer">
+                            <div class="stats">
+                            <i class="material-icons">cloud_download</i> Install to increase Download Counts
+                            </div>
+                    </div>
+            </div>
+
     </div>
-</div>
 </div>

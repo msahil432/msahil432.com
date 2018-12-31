@@ -1,17 +1,24 @@
 <div class="logo">
-    <a href="https://fb.com/sahil432" class="simple-text">
-        <div class="logo-img">
-            <img src="/assets/img/angular2-logo-red.png" alt="msahil432 Logo"/>
+    <div class="card card-profile">
+        <div class="card-avatar">
+            <a href="https://fb.com/sahil432">
+                <img class="img" src="../assets/img/faces/marc.jpg" alt="Sahil Malik's Photo"/>
+            </a>
         </div>
-        {{globals.myname}}
-    </a>
+        <div class="content">
+            <h4 class="card-title">Sahil Malik</h4>
+            <h6 class="card-category text-gray">Software Engineer</h6>
+            <!-- <h6 class="card-category text-gray">Looking for Jobs</h6> -->
+            {{globals.mytag}}
+        </div>
+    </div>
 </div>
 <div class="sidebar-wrapper">
     <ul class="nav">
-        <li routerLinkActive="active" *ngFor="let menuItem of menuItems" class="{{menuItem.class}} nav-item">
-            <a class="nav-link" [routerLink]="[menuItem.path]">
-                <i class="material-icons">{{menuItem.icon}}</i>
-                <p>{{menuItem.title}}</p>
+        <li class="nav-item" *ngFor="let item of globals.mySocio">
+            <a class="nav-link" href="{{item.link}}" target="_blank" rel="noreferrer">
+                <i class="material-icons">tab_unselected</i>
+                <p>{{item.name}}</p>
             </a>
         </li>
     </ul>

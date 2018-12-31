@@ -12,10 +12,6 @@ import { NgxTwitterTimelineModule } from 'ngx-twitter-timeline';
 const routes: Routes =[
   {
     path: '',
-    redirectTo: 'dashboard',
-    pathMatch: 'full',
-  },{
-    path: '',
     component: AdminLayoutComponent,
     children: [
       {
