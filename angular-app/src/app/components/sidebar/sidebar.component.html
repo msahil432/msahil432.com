@@ -17,7 +17,7 @@
     <ul class="nav">
         <li class="nav-item" *ngFor="let item of globals.mySocio">
             <a class="nav-link" href="{{item.link}}" target="_blank" rel="noreferrer">
-                <i class="material-icons">tab_unselected</i>
+                <img src="{{item.image}}" alt="{{item.name}} Icon"/>
                 <p>{{item.name}}</p>
             </a>
         </li>
