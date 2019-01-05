@@ -43,6 +43,28 @@ export class UserProfileComponent implements OnInit {
       this.showNotification();
       this.globals.notified=true;
     }
+
+    var t: Array<{ tech:string, used: number }> = [];
+    this.globals.myPro.forEach(function (el) {
+      el.tech.forEach(function (techs) { 
+        var found: boolean = false;
+        var index = 0;
+        t.forEach(function (s) {
+          if (s.tech == techs) {
+            found = true;
+            t.splice(index, 1);
+            t.push({ tech: techs, used: s.used + 1 });
+          }
+          index++;
+        })
+        if (!found) t.push({ tech: techs, used: 1 });
+      })
+    });
+    
+    this.techs = t.sort(function(a, b): number{
+      return b.used-a.used;
+    });
   }
 
+  public techs;
 }

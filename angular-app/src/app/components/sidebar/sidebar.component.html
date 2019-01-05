@@ -17,8 +17,10 @@
     <ul class="nav">
         <li class="nav-item" *ngFor="let item of globals.mySocio">
             <a class="nav-link" href="{{item.link}}" target="_blank" rel="noreferrer">
-                <img src="{{item.image}}" alt="{{item.name}} Icon"/>
-                <p>{{item.name}}</p>
+                <p>
+                    <img height="24" width ="24" src="{{item.image}}" alt="{{item.name}} Icon"/>
+                    {{item.name}} /{{item.username}}
+                </p>
             </a>
         </li>
     </ul>

@@ -1,6 +1,5 @@
 <div class="main-content">
     <div class="container-fluid">
-        
         <!-- Some Bakwaas Stuff -->
         <div class="card">
             <div class="card-header card-header-warning">
@@ -79,8 +78,7 @@
                 <h3 class="title">{{item.name}}</h3>
                 <blockquote>{{item.details}}</blockquote>
             </div>
-        </div>
-        
+        </div>       
         
         <h3>Here are my projects:</h3>
         
@@ -110,20 +108,22 @@
             </div>
 
             <h3>Here are live projects:</h3>
-
-            <div class="card card-stats">
-                    <div class="card-header card-header-success card-header-icon">
-                            <div class="card-icon">
-                                    <i class="material-icons">android</i>
+            <div class="row">
+                <div class="col-lg-6 col-md-4 col-sm-6" *ngFor="let demo of globals.myDemos">
+                    <a href="{{demo.link}}" target="_blank" rel="noreferrer">
+                        <div class="card card-stats">
+                            <div class="card-header card-header-success card-header-icon">
+                                <div class="card-icon">
+                                        <i class="material-icons">{{demo.icon}}</i>
+                                </div>
+                                <p class="card-category">{{demo.action}}</p>
+                                <h3 class="card-title">{{demo.name}}</h3>
+                                <p class="card-description text-secondary">{{demo.description}}</p>
                             </div>
-                            <p class="card-category">Install app</p>
-                            <h3 class="card-title">Click-Away</h3>
-                    </div>
-                    <div class="card-footer">
-                            <div class="stats">
-                            <i class="material-icons">cloud_download</i> Install to increase Download Counts
-                            </div>
-                    </div>
+                            <div class="card-footer"></div>
+                        </div>
+                    </a>
+                </div>
             </div>
 
     </div>

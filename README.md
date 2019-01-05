@@ -1,4 +1,4 @@
-# [msahil432.com - Online Profile] (http://msahil432.com)
+# [msahil432.com - Online Profile](https://www.msahil432.com)
 Based on **[Material Dashboard Angular](https://github.com/creativetimofficial/material-dashboard-angular2/)**
 
 Special thanks to [Creative Tim](https://github.com/creativetimofficial/) and other contributors for making this template.
