@@ -2,9 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import {Globals} from '../../globals';
 
-import { AdsenseModule } from 'ng2-adsense';
-
-import { NgxTwitterTimelineModule } from 'ngx-twitter-timeline';
+import { CookieService } from 'ngx-cookie-service';
 
 declare var $: any;
 
@@ -17,7 +15,7 @@ declare var $: any;
 
 export class UserProfileComponent implements OnInit {
 
-  constructor(public globals: Globals) { }
+  constructor(public globals: Globals, private cookieService : CookieService) { }
 
   showNotification(){
     const type = ['','info','success','warning','danger'];
@@ -39,9 +37,9 @@ export class UserProfileComponent implements OnInit {
 
   ngOnInit() {
     //Show Notification
-    if(!this.globals.notified){
+    if(!(this.cookieService.get("notified") == "true")){
       this.showNotification();
-      this.globals.notified=true;
+      this.cookieService.set("notified", "true", 1)
     }
 
     var t: Array<{ tech:string, used: number }> = [];

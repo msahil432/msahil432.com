@@ -5,8 +5,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AdminLayoutRoutes } from './admin-layout.routing';
 import { UserProfileComponent } from '../../user-profile/user-profile.component';
 
-import { AdsenseModule } from 'ng2-adsense';
-
 import {
   MatButtonModule,
   MatInputModule,

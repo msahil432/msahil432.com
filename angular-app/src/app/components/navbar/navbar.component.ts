@@ -5,8 +5,6 @@ import { Router } from '@angular/router';
 
 import {Globals} from '../../../globals';
 
-import { AdsenseModule } from 'ng2-adsense';
-
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',

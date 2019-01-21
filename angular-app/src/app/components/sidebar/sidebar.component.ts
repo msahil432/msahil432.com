@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 
-import { AdsenseModule } from 'ng2-adsense';
-
 import {Globals} from '../../../globals';
 
 import { DomSanitizer } from '@angular/platform-browser';

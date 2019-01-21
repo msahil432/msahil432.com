@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class Globals {
-  public notified: boolean = false;
   public myname: string = 'Sahil Malik';
   public mytag: string = "Getting Things Done!";
   public myMoto: string = "Everything can be improved. Similarly, Every Code can be Optimised.";

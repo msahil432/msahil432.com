@@ -1,13 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule, } from '@angular/common';
 import { BrowserModule  } from '@angular/platform-browser';
-import { Routes, RouterModule } from '@angular/router';
+import { Routes, RouterModule, ExtraOptions } from '@angular/router';
 
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
-
-import { AdsenseModule } from 'ng2-adsense';
-
-import { NgxTwitterTimelineModule } from 'ngx-twitter-timeline';
 
 const routes: Routes =[
   {
@@ -22,13 +18,15 @@ const routes: Routes =[
   }
 ];
 
+const routerOptions: ExtraOptions = {
+  anchorScrolling: 'enabled'
+};
+
 @NgModule({
   imports: [
     CommonModule,
     BrowserModule,
-    RouterModule.forRoot(routes),
-    AdsenseModule,
-    NgxTwitterTimelineModule.forRoot()
+    RouterModule.forRoot(routes, routerOptions),
   ],
   exports: [
   ],

@@ -2,8 +2,6 @@ import { Component, OnInit } from '@angular/core';
 
 import {Globals} from '../../../globals';
 
-import { AdsenseModule } from 'ng2-adsense';
-
 @Component({
   selector: 'app-footer',
   templateUrl: './footer.component.html',

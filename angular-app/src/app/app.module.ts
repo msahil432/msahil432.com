@@ -14,9 +14,7 @@ import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.compon
 
 import {ServiceWorkerModule} from '@angular/service-worker';
 
-import { AdsenseModule } from 'ng2-adsense';
-
-import { NgxTwitterTimelineModule } from 'ngx-twitter-timeline';
+import { CookieService } from 'ngx-cookie-service';
 
 @NgModule({
       imports: [
@@ -26,18 +24,13 @@ import { NgxTwitterTimelineModule } from 'ngx-twitter-timeline';
         ComponentsModule,
         RouterModule,
         AppRoutingModule,
-        AdsenseModule.forRoot({
-          adClient: 'ca-pub-5745108171259405',
-          adSlot: 8883800760,
-        }),
         ServiceWorkerModule.register('ngsw-worker.js', { enabled: true}),
-        NgxTwitterTimelineModule
       ],
   declarations: [
     AppComponent,
     AdminLayoutComponent
   ],
-  providers: [AdsenseModule, NgxTwitterTimelineModule],
+  providers: [CookieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -26,6 +26,10 @@
         "/assets/img/apple-touch-icon.png",
         "/assets/img/browserconfig.xml",
         "/assets/img/cover.jpeg",
+        "/assets/img/faces/1",
+        "/assets/img/faces/2",
+        "/assets/img/faces/3",
+        "/assets/img/faces/4",
         "/assets/img/faces/marc.jpg",
         "/assets/img/favicon-16x16.png",
         "/assets/img/favicon-32x32.png",
@@ -139,7 +143,11 @@
     "/assets/img/apple-touch-icon.png": "7b8c2492d89c9336882b24585c15e3a7a2e3cafa",
     "/assets/img/browserconfig.xml": "974aea18bda5a95802c06b80126ab1d96d91d708",
     "/assets/img/cover.jpeg": "0aeba83eab26fac8c1f0850cbb1fc1bc109e94b0",
-    "/assets/img/faces/marc.jpg": "01d0a57476f2e62c93b434c3acf50152ccf20720",
+    "/assets/img/faces/1": "98622e4ea43a118b209e683bf26c0e125b924c0b",
+    "/assets/img/faces/2": "b8714d2886f5b166f02557b8857e4cf1745c01f2",
+    "/assets/img/faces/3": "01d0a57476f2e62c93b434c3acf50152ccf20720",
+    "/assets/img/faces/4": "a91aa3473c8c7ce5c96acaa67d2b0f2b7fb5865e",
+    "/assets/img/faces/marc.jpg": "de116ddb17a28ed39b6445e1e3dc35f5e905e4e5",
     "/assets/img/favicon-16x16.png": "cd4d14fbb5f272a7712c69a101bdf4a0ea3b784f",
     "/assets/img/favicon-32x32.png": "220d82c7cd40d7a28f73fcc3d68e633196277b36",
     "/assets/img/favicon.ico": "2e9a63b4584d57a4aed3136e84019b19463a06a6",
@@ -238,7 +246,7 @@
     "/assets/scss/core/variables/_type.scss": "d382ab8705546b30d3768ed3ebcfb11ebe0736a7",
     "/assets/scss/material-dashboard.scss": "0e95197beff66c369497a4d20e637f23862deb71",
     "/favicon.ico": "2e9a63b4584d57a4aed3136e84019b19463a06a6",
-    "/index.html": "2b5a355188a3e18b69296cfa875f7cf34691fcbc"
+    "/index.html": "0db265abcf0926d979aee6d9e90b4cca00ddc2d5"
   },
   "navigationUrls": [
     {
