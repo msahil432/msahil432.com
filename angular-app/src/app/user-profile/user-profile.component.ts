@@ -1,8 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 
 import {Globals} from '../../globals';
 
 import { CookieService } from 'ngx-cookie-service';
+
+import { Router } from '@angular/router';
+import { AfterViewChecked } from '@angular/core';
+import { AfterViewInit } from '@angular/core';
 
 declare var $: any;
 
@@ -13,9 +17,9 @@ declare var $: any;
   providers: [Globals]
 })
 
-export class UserProfileComponent implements OnInit {
+export class UserProfileComponent implements OnInit, AfterViewInit {
 
-  constructor(public globals: Globals, private cookieService : CookieService) { }
+  constructor(public globals: Globals, private cookieService : CookieService, private router: Router) { }
 
   showNotification(){
     const type = ['','info','success','warning','danger'];
@@ -64,5 +68,20 @@ export class UserProfileComponent implements OnInit {
     });
   }
 
+  ngAfterViewInit(){
+    if(this.router.url.indexOf("#") != -1){
+      var hash = this.router.url.substring(this.router.url.indexOf("#")+1);
+      this.scrollMe(hash);
+      let el = document.getElementById(hash+"_ql");
+      el.click();
+    }
+  }
+
   public techs;
+
+  scrollMe(id: string) {
+    let el = document.getElementById(id);
+    console.log("Scroll me to "+id)
+    el.scrollIntoView({behavior: 'smooth', block: 'start', inline: 'nearest'});
+  }
 }

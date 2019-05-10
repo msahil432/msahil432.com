@@ -11,21 +11,23 @@ export class Globals {
   public mySocio: Array<{name: string, username:string, link:string, image:string}> = [
                     {name:"LinkedIn", username:"msahil432", 
                     link:"https://linkedin.com/in/msahil432", 
-                    image:"../assets/img/linkedin-icon.svg"
+                    image:"https://logo.clearbit.com/linkedin.com?size=80"
                   },
-                    {name:"Stack Overflow", username:"5634251", link:"https://stackoverflow.com/users/5634251/sahil-malik", image:"../assets/img/stackoverflow-icon.svg"
+                    {name:"Stack Overflow", username:"5634251", 
+                    link:"https://stackoverflow.com/users/5634251/sahil-malik", 
+                    image:"https://logo.clearbit.com/stackoverflow.com?size=80"
                   },
                     {name:"Github", username:"msahil432", 
                     link:"https://github.com/msahil432", 
-                    image:"../assets/img/github-icon.svg"
+                    image:"https://logo.clearbit.com/github.com?size=80"
                   },
                     {name:"Gitlab", username:"msahil432", 
                     link:"https://gitlab.com/msahil432", 
-                    image:"../assets/img/gitlab-icon.svg"
+                    image:"https://logo.clearbit.com/gitlab.com?size=80"
                   },
                     {name:"Twitter", username:"msahil432", 
                     link:"https://twitter.com/msahil432", 
-                    image:"../assets/img/twitter-icon.svg"
+                    image:"https://logo.clearbit.com/twitter.com?size=80"
                   },
                     {name:"Google Play", username:"msahil432", 
                     link:"https://play.google.com/store/apps/developer?id=msahil432", 
@@ -51,7 +53,7 @@ export class Globals {
                   [
                     {
                       institute: "Maharaja Agrasen Institute of Technology, Delhi", degree: "Bachelor of Technology - Computer Science & Engineering ", time : "2016 - 2019",
-                      details: "Affialted to Guru Gobind Singh Indraprastha University, Delhi. 74% aggregate."
+                      details: "Affialted to Guru Gobind Singh Indraprastha University, Delhi. 75% aggregate."
                     },
                     {
                       institute: "Guru Nanak Dev Institute of Technology, Delhi", degree: "Polytechnic Diploma - Computer Engineering.", time : "2013 - 2016",
@@ -134,7 +136,7 @@ export class Globals {
                     },
                     {
                       name:"Click-Away", role: "Android Developer", slogan:"Now, Your safekeepers are just a click away",
-                      time: "Feb 2017", link: "https://play.google.com/store/apps/details?id=msahil432.click_away",
+                      time: "Feb 2017", link: "https://github.com/msahil432/click_away",
                       details:"Built with one other friend within 24 hours, during Hackathon event of Delhi Technical University, HackDTU.",
                       tech :["Java", "Android", "Google Location API", "SQLite","NodeJS", "MongoDB", "Javascript", "Heroku", "XML", "UX"]
                     },
@@ -146,25 +148,25 @@ export class Globals {
                     },
                     {
                       name:"ML.Player", role:"Software Engineer", slogan:"The Player which Adapts", 
-                      time: "Jan 2016 - March 2017",  link : "#",
+                      time: "Jan 2016 - March 2017",  link : "https://github.com/msahil432/ml_player",
                       details:"A Desktop Application written in Java for Music, with Welcome, Reset and Playlist (using XML) capabilities. Developed as a portable application so that all OS are supported. It was submitted as Final Project in Polytechnic Diploma at GNDIT.", 
                       tech :["Java", "Swing", "JDOM", "XML", "UX"]
                     },
                     {
                       name:"CricChat Bot", role : "Software Developer", slogan:"Fastest Scores", 
-                      time: "June 2016",  link : "https://m.me/fastestscores",
+                      time: "June 2016",  link : "https://github.com/kushagrachadha/CricChat",
                       details:"A few Facebook Messenger Bots were created to learn then newly launched platform of facebook. Created using Node.JS with MongoDB and Heroku Hosting.", 
                       tech :["NodeJS", "MongoDB","Heroku"]
                     },
                     {
                       name:"QuizApp", role : "Backend Developer", slogan:"", 
-                      time: "Jan 2017",  link : "#",
+                      time: "Jan 2017",  link : "https://github.com/kushagrachadha/QuizApp",
                       details:"A Web Application created with Meteor.JS for Coding Blocks’ Hackathon at IIT, Delhi in 2016. As the name suggests, it was created for playing quizzes. There were total 3 members in the team, from which I did the backend part.", 
                       tech :["MeteorJS", "MongoDB", "Javascript"]
                     },
                     {
                       name:"msahil432.com", role: "Web Engineer", slogan:"Online Profile",
-                      time: "Under Development",  link : "https://www.msahil432.com",
+                      time: "Under Development",  link : "https://github.com/msahil432/msahil432.com",
                       details:"Building as Online CV using Angular along with Express for RestAPI.", 
                       tech :["Angular", "NodeJS", "ExpressJS", "Javascript", "SEO", "HTML", "CSS", "Material Design", "AWS", "Web Hosting"]
                     }
