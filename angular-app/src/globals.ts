@@ -27,8 +27,8 @@ export class Globals {
                     link:"https://twitter.com/msahil432", 
                     image:"../assets/img/twitter-icon.svg"
                   },
-                    {name:"Google Play", username:"MSAHIL432.com", 
-                    link:"https://play.google.com/store/apps/developer?id=MSAHIL432.com", 
+                    {name:"Google Play", username:"msahil432", 
+                    link:"https://play.google.com/store/apps/developer?id=msahil432", 
                     image:"../assets/img/googleplay-icon.svg"}
                   ];
   public mylinks: Array<{name: string, link: string}> =[
@@ -121,6 +121,12 @@ export class Globals {
                   ];
 
   public myPro : Array<{name: string, role: string, slogan: string, time: string, details: string, link: String, tech: Array<string>}> = [
+                    {
+                      name:"Plus SMS", role:"Android Developer", slogan:"Categorize your messages into categories.",
+                      time: "Jan 2019 - April 2019",  link : "https://play.google.com/store/apps/details?id=com.msahil432.sms",
+                      details:"Submitted as Major Project. Android Application to categorize SMS into various categories based on content using Machine Learning. Other features include timed SMS, OTP Copy, etc.", 
+                      tech :["Android", "Java", "SQLite", "XML"]
+                    },
                     { name:"PenPencil - Internship", role: "Android Developer", slogan:"In Office Internship with stipend",
                       time: "Aug 2018 - Sept 2018", link: "https://drive.google.com/open?id=1iGH9i8jvS92_jgNQITqTXjQvhDHsA1bu",
                       details:"Worked on two Applications: ABI Champions And an E-Commerce Application",
@@ -157,20 +163,18 @@ export class Globals {
                       tech :["MeteorJS", "MongoDB", "Javascript"]
                     },
                     {
-                      name:"Android Messages Organizer", role:"Android Developer", slogan:"SMS made easy",
-                      time: "Currently Working",  link : "#",
-                      details:"Will be used to categorize SMS into various categories based on content using Machine Learning at Server, along with a Web Interface for accessing SMS online. There are other features too like timed SMS, OTP Copy, etc. Being created with one friend who manages Backend in Node.JS with MongoDB and Heroku Hosting.", 
-                      tech :["Android", "Java", "SQLite", "XML", "NodeJS", "HTML", "RestAPI", "ExpressJS", "MongoDB", "Heroku"]
-                    },
-                    {
                       name:"msahil432.com", role: "Web Engineer", slogan:"Online Profile",
-                      time: "Currrently Working",  link : "http://www.msahil432.com",
+                      time: "Under Development",  link : "https://www.msahil432.com",
                       details:"Building as Online CV using Angular along with Express for RestAPI.", 
                       tech :["Angular", "NodeJS", "ExpressJS", "Javascript", "SEO", "HTML", "CSS", "Material Design", "AWS", "Web Hosting"]
                     }
                   ];
 
   public myDemos : Array<{name: string, icon: string, action: string, link: string, description: string}>=[
+    {
+      name: "Plus SMS", icon:"android", action:"Install",
+      link: "https://play.google.com/store/apps/details?id=com.msahil432.sms", 
+      description: "Organize your sms into categories."},
     {
       name: "Click-Away", icon:"android", action:"Install",
       link: "https://play.google.com/store/apps/details?id=msahil432.click_away", 
