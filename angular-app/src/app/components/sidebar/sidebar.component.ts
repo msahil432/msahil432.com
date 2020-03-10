@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
-import {Globals} from '../../../globals';
-
 import { DomSanitizer } from '@angular/platform-browser';
+
+import { ProfileDataService } from './../../services/profile-data.service';
 
 declare const $: any;
 declare interface RouteInfo {
@@ -19,12 +19,11 @@ export const ROUTES: RouteInfo[] = [
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
   styleUrls: ['./sidebar.component.css'],
-  providers: [Globals]
 })
 export class SidebarComponent implements OnInit {
     menuItems: any[];
 
-  constructor(public globals: Globals, private _DomSanitizationService: DomSanitizer ) { }
+  constructor(public profileData: ProfileDataService, private _DomSanitizationService: DomSanitizer ) { }
 
   ngOnInit() {
     this.menuItems = ROUTES.filter(menuItem => menuItem);

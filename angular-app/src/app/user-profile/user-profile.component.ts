@@ -1,12 +1,11 @@
 import { Component, OnInit} from '@angular/core';
 
-import {Globals} from '../../globals';
-
 import { CookieService } from 'ngx-cookie-service';
 
 import { Router } from '@angular/router';
-import { AfterViewChecked } from '@angular/core';
 import { AfterViewInit } from '@angular/core';
+
+import { ProfileDataService } from './../services/profile-data.service';
 
 declare var $: any;
 
@@ -14,12 +13,13 @@ declare var $: any;
   selector: 'app-user-profile',
   templateUrl: './user-profile.component.html',
   styleUrls: ['./user-profile.component.css'],
-  providers: [Globals]
 })
 
 export class UserProfileComponent implements OnInit, AfterViewInit {
 
-  constructor(public globals: Globals, private cookieService : CookieService, private router: Router) { }
+  constructor(private cookieService : CookieService,
+    private router: Router,
+    public profileData: ProfileDataService) { }
 
   showNotification(){
     const type = ['','info','success','warning','danger'];
@@ -47,7 +47,7 @@ export class UserProfileComponent implements OnInit, AfterViewInit {
     }
 
     var t: Array<{ tech:string, used: number }> = [];
-    this.globals.myPro.forEach(function (el) {
+    this.profileData.projects.forEach(function (el) {
       el.tech.forEach(function (techs) { 
         var found: boolean = false;
         var index = 0;
@@ -81,7 +81,6 @@ export class UserProfileComponent implements OnInit, AfterViewInit {
 
   scrollMe(id: string) {
     let el = document.getElementById(id);
-    console.log("Scroll me to "+id)
-    el.scrollIntoView({behavior: 'smooth', block: 'start', inline: 'nearest'});
+    el.scrollIntoView({behavior: 'smooth'});
   }
 }

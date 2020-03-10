@@ -15,6 +15,7 @@ import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.compon
 import {ServiceWorkerModule} from '@angular/service-worker';
 
 import { CookieService } from 'ngx-cookie-service';
+import { ProfileDataService } from './services/profile-data.service';
 
 @NgModule({
       imports: [
@@ -30,7 +31,7 @@ import { CookieService } from 'ngx-cookie-service';
     AppComponent,
     AdminLayoutComponent
   ],
-  providers: [CookieService],
+  providers: [CookieService, ProfileDataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -10,13 +10,13 @@
             <a href="mailto:dev@msahil432.com"><h6 class="text-gray">dev@msahil432.com</h6></a>
             <h6 class="card-category text-gray">Software Engineer</h6>
             <!-- <h6 class="card-category text-gray">Looking for Jobs</h6> -->
-            {{globals.mytag}}
+            {{profileData.tag}}
         </div>
     </div>
 </div>
 <div class="sidebar-wrapper">
     <ul class="nav">
-        <li class="nav-item" *ngFor="let item of globals.mySocio">
+        <li class="nav-item" *ngFor="let item of profileData.socialLinks">
             <a class="nav-link" href="{{item.link}}" target="_blank" rel="noreferrer">
                 <p>
                     <img height="24" width ="24" src="{{item.image}}" alt="{{item.name}} Icon"/>

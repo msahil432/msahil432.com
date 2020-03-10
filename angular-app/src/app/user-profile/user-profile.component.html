@@ -1,163 +1,155 @@
 <div class="main-content">
     <div class="container-fluid">
+    <!-- Quick Links -->
+    <div class="row">
+        <div class="col-lg-3 col-md-4 col-sm-3">
+            <div class="card" (click)="scrollMe('projects')" id="projects_ql">
+                <div class="card-header card-header-info">
+                    <h4 class="title">My Projects</h4>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-3">
+            <div class="card" (click)="scrollMe('live_projects')" id="live_projects_ql">
+                <div class="card-header card-header-info">
+                    <h4 class="title">My Live Projects</h4>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-3">
+            <div class="card" (click)="scrollMe('education')" id="education_ql">
+                <div class="card-header card-header-info">
+                    <h4 class="title">My Education</h4>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-3">
+            <div class="card" (click)="scrollMe('awards')" id="awards_ql">
+                <div class="card-header card-header-info">
+                    <h4 class="title">My Awards</h4>
+                </div>
+            </div>
+        </div>
+    </div>
 
-        <!-- Quick Links -->
-        <div class="row">
-            <div class="col-lg-3 col-md-4 col-sm-3">
-                <div class="card" (click)="scrollMe('projects')" id="projects_ql">
-                    <div class="card-header card-header-info">
-                        <h4 class="title">My Projects</h4>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-3">
-                <div class="card" (click)="scrollMe('live_projects')" id="live_projects_ql">
-                    <div class="card-header card-header-info">
-                        <h4 class="title">My Live Projects</h4>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-3">
-                <div class="card" (click)="scrollMe('education')" id="education_ql">
-                    <div class="card-header card-header-info">
-                        <h4 class="title">My Education</h4>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-3">
-                <div class="card" (click)="scrollMe('awards')" id="awards_ql">
-                    <div class="card-header card-header-info">
-                        <h4 class="title">My Awards</h4>
-                    </div>
-                </div>
+    <!-- Some Bakwaas Stuff -->
+    <div class="card">
+        <div class="card-header card-header-warning">
+            <h4 class="card-title">About Me</h4>
+        </div>
+        <div class="card-body">
+            <h3 class="title">My Moto</h3>
+            <blockquote>{{profileData.moto}}</blockquote>
+        </div>
+        <div class="card-footer row pt-0">
+            <div class="col-md-4" *ngFor="let quality of profileData.qualities">
+                <span class="tech-span">{{quality}}</span>
             </div>
         </div>
+    </div>
 
-        <!-- Some Bakwaas Stuff -->
-        <div class="card">
-            <div class="card-header card-header-warning">
-                <h4 class="card-title">About Me</h4>
-            </div>
-            <div class="card-body">
-                <h3 class="title">My Moto</h3>
-                <blockquote>{{globals.myMoto}}</blockquote>
-            </div>
-            <div class="card-footer">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-md-4" *ngFor="let quality of globals.myQualities">
-                            <span class="tech-span">{{quality}}</span>
-                        </div>
-                    </div>
+    <!-- Profile Details -->
+
+    <div class="card">
+        <div class="card-header card-header-danger">
+            <h4 class="title">Experience</h4>
+        </div>
+        <div class="card-body" *ngFor="let item of profileData.experience">
+            <h3 class="title">{{item.company}}</h3>
+            <p class="category">{{item.time}}</p>
+            <blockquote>{{item.details}}</blockquote>
+        </div>
+    </div>
+    <div class="card" id="education">
+        <div class="card-header card-header-danger">
+                <h4 class="title">Education</h4>
+        </div>
+        <div class="card-body" *ngFor="let item of profileData.education">
+            <h3 class="title">{{item.degree}}</h3>
+            <h4 class="title">{{item.institute}}</h4>
+            <p class="category">{{item.time}}</p>
+            <blockquote>{{item.details}}</blockquote>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header card-header-danger">
+            <h4 class="title">Certifications</h4>
+        </div>
+        <div class="card-body" *ngFor="let item of profileData.qualifications">
+            <h3 class="title">{{item.name}}</h3>
+            <blockquote>{{item.details}}</blockquote>
+        </div>
+    </div>
+    <div class="card" id="awards">
+        <div class="card-header  card-header-danger">
+            <h4 class="title">Awards</h4>
+        </div>
+        <div class="card-body" *ngFor="let item of profileData.awards">
+            <h3 class="title">{{item.name}}</h3>
+            <blockquote>{{item.details}}</blockquote>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header  card-header-danger">
+            <h4 class="title">Extra Curricular Activities</h4>
+        </div>
+        <div class="card-body" *ngFor="let item of profileData.extraCurricular">
+            <h3 class="title">{{item.name}}</h3>
+            <blockquote>{{item.details}}</blockquote>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header card-header-danger">
+            <h4 class="title">Professional Memberships</h4>
+        </div>
+        <div class="card-body" *ngFor="let item of profileData.memberships">
+            <h3 class="title">{{item.name}}</h3>
+            <blockquote>{{item.details}}</blockquote>
+        </div>
+    </div>       
+    
+    <h3 id="projects">Here are my projects:</h3>
+    <div *ngFor="let item of profileData.projects">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header card-header-warning">
+                    <h4 class="card-title">{{item.role}}</h4>
                 </div>
-            </div>
-        </div>
-
-        <!-- Profile Details -->
-
-        <div class="card">
-            <div class="card-header card-header-danger">
-                <h4 class="title">Experience</h4>
-            </div>
-            <div class="card-body" *ngFor="let item of globals.myExp">
-                <h3 class="title">{{item.company}}</h3>
-                <p class="category">{{item.time}}</p>
-                <blockquote>{{item.details}}</blockquote>
-            </div>
-        </div>
-        <div class="card" id="education">
-            <div class="card-header card-header-danger">
-                    <h4 class="title">Education</h4>
-            </div>
-            <div class="card-body" *ngFor="let item of globals.myEdu">
-                <h3 class="title">{{item.degree}}</h3>
-                <h4 class="title">{{item.institute}}</h4>
-                <p class="category">{{item.time}}</p>
-                <blockquote>{{item.details}}</blockquote>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-header card-header-danger">
-                <h4 class="title">Certifications</h4>
-            </div>
-            <div class="card-body" *ngFor="let item of globals.myQua">
-                <h3 class="title">{{item.name}}</h3>
-                <blockquote>{{item.details}}</blockquote>
-            </div>
-        </div>
-        <div class="card" id="awards">
-            <div class="card-header  card-header-danger">
-                <h4 class="title">Awards</h4>
-            </div>
-            <div class="card-body" *ngFor="let item of globals.myAwa">
-                <h3 class="title">{{item.name}}</h3>
-                <blockquote>{{item.details}}</blockquote>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-header  card-header-danger">
-                <h4 class="title">Extra Curricular Activities</h4>
-            </div>
-            <div class="card-body" *ngFor="let item of globals.myExc">
-                <h3 class="title">{{item.name}}</h3>
-                <blockquote>{{item.details}}</blockquote>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-header card-header-danger">
-                <h4 class="title">Professional Memberships</h4>
-            </div>
-            <div class="card-body" *ngFor="let item of globals.myMem">
-                <h3 class="title">{{item.name}}</h3>
-                <blockquote>{{item.details}}</blockquote>
-            </div>
-        </div>       
-        
-        <h3 id="projects">Here are my projects:</h3>
-        <div *ngFor="let item of globals.myPro">
-                <div class="col-md-12">
-                    <div class="card">
-                        <div class="card-header card-header-warning">
-                            <h4 class="card-title">{{item.role}}</h4>
-                        </div>
-                        <div class="card-body">
-                            <a href="{{item.link}}"><h3 class="title">{{item.name}}</h3></a>
-                            <h4>{{item.slogan}}</h4>
-                            <p class="category">{{item.time}}</p>
-                            <blockquote>{{item.details}}</blockquote>
-                        </div>
-                        <div class="card-footer">
-                            <div class="container-fluid">
-                                <div class="row">
-                                    <div class="col-md-4" *ngFor="let techs of item.tech">
-                                        <span class="tech-span">{{techs}}</span>
-                                    </div>
-                                </div>
+                <div class="card-body">
+                    <a href="{{item.link}}"><h3 class="title">{{item.name}}</h3></a>
+                    <h4>{{item.slogan}}</h4>
+                    <p class="category">{{item.time}}</p>
+                    <blockquote>{{item.details}}</blockquote>
+                </div>
+                <div class="card-footer">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-4" *ngFor="let techs of item.tech">
+                                <span class="tech-span">{{techs}}</span>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
 
-            <h3 id="live_projects">Here are live projects:</h3>
-            <div class="row">
-                <div class="col-lg-6 col-md-4 col-sm-6" *ngFor="let demo of globals.myDemos">
-                    <a href="{{demo.link}}" target="_blank" rel="noreferrer">
-                        <div class="card card-stats">
-                            <div class="card-header card-header-success card-header-icon">
-                                <div class="card-icon">
-                                        <i class="material-icons">{{demo.icon}}</i>
-                                </div>
-                                <p class="card-category">{{demo.action}}</p>
-                                <h3 class="card-title">{{demo.name}}</h3>
-                                <p class="card-description text-secondary">{{demo.description}}</p>
-                            </div>
-                            <div class="card-footer"></div>
+    <h3 id="live_projects">Here are live projects:</h3>
+    <div class="row">
+        <div class="col-lg-6 col-md-4 col-sm-6" *ngFor="let demo of profileData.demos">
+            <a href="{{demo.link}}" target="_blank" rel="noreferrer">
+                <div class="card card-stats">
+                    <div class="card-header card-header-success card-header-icon">
+                        <div class="card-icon">
+                                <i class="material-icons">{{demo.icon}}</i>
                         </div>
-                    </a>
+                        <p class="card-category">{{demo.action}}</p>
+                        <h3 class="card-title">{{demo.name}}</h3>
+                        <p class="card-description text-secondary">{{demo.description}}</p>
+                    </div>
+                    <div class="card-footer"></div>
                 </div>
-            </div>
-        
-
+            </a>
+        </div>
     </div>
 </div>
