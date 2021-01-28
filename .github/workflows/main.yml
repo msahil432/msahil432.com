@@ -25,12 +25,10 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Checking out Source Code
         uses: actions/checkout@v2
-      
-      # Setup a Node.js environment
+
       - name: Setup Node.js environment
         uses: actions/setup-node@v2.1.4
 
-      # Runs a single command using the runners shell
       - name: Install Dependencies and Build
         run: |
           cd ./angular-app
