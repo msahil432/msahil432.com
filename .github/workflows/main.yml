@@ -31,20 +31,18 @@ jobs:
         uses: actions/setup-node@v2.1.4
 
       # Runs a single command using the runners shell
-      - name: cd into directory
-        run: cd ./angular-app
+      - name: Install Dependencies and Build
+        run: |
+          cd ./angular-app
+          npm i
+          npm run build:prod
 
-      - name: Installing dependencies
-        run: npm i
-
-      - name: Building Angular App
-        run: npm run build:prod
       - name: Pushes to another repository
         uses: cpina/github-action-push-to-another-repository@cp_instead_of_deleting
         env:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
         with:
-          source-directory: 'dist'
+          source-directory: 'angular-app/dist'
           destination-github-username: 'msahil432'
           destination-repository-name: 'msahil432.github.io'
           user-email: dev@msahil432.com
