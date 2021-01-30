@@ -17,10 +17,10 @@
 <div class="sidebar-wrapper">
     <ul class="nav">
         <li class="nav-item" *ngFor="let item of profileData.socialLinks">
-            <a class="nav-link" href="{{item.link}}" target="_blank" rel="noreferrer">
-                <p>
+            <a class="nav-link" href="{{item.link}}" target="_blank" rel="noopener noreferrer" title="{{item.name}}">
+                <p class="mx-4 pl-2">
                     <img height="24" width ="24" src="{{item.image}}" alt="{{item.name}} Icon"/>
-                    {{item.name}} <small>: {{item.username}}</small>
+                    <span class="ml-4" style="text-transform: none;">{{item.username}}</span>
                 </p>
             </a>
         </li>
