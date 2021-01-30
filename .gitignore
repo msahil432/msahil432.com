@@ -1,4 +1,5 @@
 /angular-app/node_modules
+/angular-app/dist
 /android-app/build
 /android-app/captures
 *.iml

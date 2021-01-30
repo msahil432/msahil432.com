@@ -6,3 +6,8 @@
 small{
     text-transform: lowercase;
 }
+
+.sidebar-wrapper {
+    height: calc(100vh - 268px);
+    padding-bottom: 0;
+}

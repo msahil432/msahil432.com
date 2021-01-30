@@ -20,30 +20,25 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "src/tsconfig.app.json",
             "assets": [
-              "src/favicon.ico",
               "src/assets",
-              "src/sitemap.xml",
               "src/.htaccess",
-              "src/robots.txt",
-              "src/manifest.json"
+              "src/favicon.ico",
+              "src/manifest.json",
+              "src/sitemap.xml",
+              "src/robots.txt"
             ],
             "styles": [
               "./src/styles.css",
               "./node_modules/bootstrap/dist/css/bootstrap.css",
               "./node_modules/perfect-scrollbar/css/perfect-scrollbar.css",
-              "./src/assets/scss/material-dashboard.scss",
-              "./src/assets/css/demo.css"
+              "./src/assets/scss/material-dashboard.scss"
             ],
             "scripts": [
               "./node_modules/jquery/dist/jquery.js",
               "./node_modules/popper.js/dist/umd/popper.js",
               "./node_modules/bootstrap-material-design/dist/js/bootstrap-material-design.min.js",
-              "./node_modules/arrive/src/arrive.js",
-              "./node_modules/moment/moment.js",
               "./node_modules/perfect-scrollbar/dist/perfect-scrollbar.min.js",
-              "./node_modules/bootstrap-notify/bootstrap-notify.js",
-              "./node_modules/chartist/dist/chartist.js",
-              "./src/assets/js/twitter.js"
+              "./node_modules/bootstrap-notify/bootstrap-notify.js"
             ]
           },
           "configurations": {

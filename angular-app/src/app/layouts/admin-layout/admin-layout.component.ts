@@ -16,6 +16,9 @@ export class AdminLayoutComponent implements OnInit {
   private lastPoppedUrl: string;
   private yScrollStack: number[] = [];
 
+  public firstImage = '../assets/img/sidebar-' + this.getRandomNumber1to4() + '.jpg';
+  public secondImage = 'url(../assets/img/sidebar-' + this.getRandomNumber1to4() + '.jpg)';
+
   constructor( public location: Location, private router: Router) {}
 
   ngOnInit() {
@@ -81,6 +84,10 @@ export class AdminLayoutComponent implements OnInit {
           bool = true;
       }
       return bool;
+  }
+
+  getRandomNumber1to4() {
+      return Math.floor(Math.random() * 4) + 1;
   }
 
 }

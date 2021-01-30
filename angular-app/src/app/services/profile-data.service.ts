@@ -15,14 +15,14 @@ export class ProfileDataService {
   public socialLinks = [
     {name:'LinkedIn', username:'msahil432',
     link:'https://linkedin.com/in/msahil432', 
-    image:'https://logo.clearbit.com/linkedin.com?size=80'
+    image:'/assets/img/linkedin-icon.svg'
   },
     {name:'Stack Overflow', username:'5634251', 
     link:'https://stackoverflow.com/users/5634251/sahil-malik', 
     image:'../assets/img/stackoverflow-icon.svg'
   },
     {name:'Github', username:'msahil432', 
-    link:'https://github.com/msahil432', 
+    link:'https://github.com/msahil432',
     image:'https://logo.clearbit.com/github.com?size=80'
   },
     {name:'Gitlab', username:'msahil432', 

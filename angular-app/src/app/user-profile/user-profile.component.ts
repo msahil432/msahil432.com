@@ -80,7 +80,8 @@ export class UserProfileComponent implements OnInit, AfterViewInit {
   public techs;
 
   scrollMe(id: string) {
-    let el = document.getElementById(id);
-    el.scrollIntoView({behavior: 'smooth'});
+    const el = document.getElementById(id);
+    const scrollTop = $(el).offset().top - 25;
+    $('html, body').animate({ scrollTop }, 1500);
   }
 }
