@@ -63,7 +63,7 @@ export class UserProfileComponent implements OnInit, AfterViewInit {
       })
     });
     
-    this.techs = t.sort(function(a, b): number{
+    this.techs = [...t].sort(function(a, b): number{
       return b.used-a.used;
     });
   }
