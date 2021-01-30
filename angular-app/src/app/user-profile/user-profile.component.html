@@ -137,11 +137,11 @@
     <h3 id="live_projects">Some projects, which are live right now:</h3>
     <div class="row">
         <div class="col-lg-6 col-md-4 col-sm-6" *ngFor="let demo of profileData.demos">
-            <a href="{{demo.link}}" target="_blank" rel="noreferrer">
+            <a href="{{demo.link}}" target="_blank" rel="noopener noreferrer">
                 <div class="card card-stats">
                     <div class="card-header card-header-success card-header-icon">
                         <div class="card-icon">
-                                <i class="material-icons">{{demo.icon}}</i>
+                                <i aria-hidden="true" class="material-icons">{{demo.icon}}</i>
                         </div>
                         <p class="card-category">{{demo.action}}</p>
                         <h3 class="card-title">{{demo.name}}</h3>
