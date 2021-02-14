@@ -64,6 +64,7 @@ jobs:
           ls -la "$CLONE_DIR"
 
           echo "Copying contents to git repo"
+          rm -rf "$CLONE_DIR"/www
           cp -ra "$SOURCE_DIRECTORY"/. "$CLONE_DIR"/www
           cd "$CLONE_DIR"
 
