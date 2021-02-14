@@ -63,12 +63,9 @@ jobs:
           git clone --single-branch --branch "master" "https://${{ secrets.API_TOKEN_GITHUB }}@github.com/msahil432/com.msahil432.profile.git" "$CLONE_DIR"
           ls -la "$CLONE_DIR"
 
-          TARGET_DIR=$(mktemp -d)
-          mv "$CLONE_DIR/.git" "$TARGET_DIR"
-
           echo "Copying contents to git repo"
-          cp -ra "$SOURCE_DIRECTORY"/. "$TARGET_DIR"/www
-          cd "$TARGET_DIR"
+          cp -ra "$SOURCE_DIRECTORY"/. "$CLONE_DIR"/www
+          cd "$CLONE_DIR"
 
           echo "Updating Base Href"
           sed -i "s/<base href='\/'>/<base href='.\/'>/" www/index.html
