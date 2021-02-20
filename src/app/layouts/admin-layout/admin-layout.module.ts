@@ -4,12 +4,11 @@ import { CommonModule } from '@angular/common';
 import { AdminLayoutRoutes } from './admin-layout.routing';
 import { UserProfileComponent } from '../../user-profile/user-profile.component';
 
-import {
-  MatButtonModule,
-  MatInputModule,
-  MatRippleModule,
-  MatTooltipModule,
-} from '@angular/material';
+import { MatButtonModule } from '@angular/material/button';
+import { MatInputModule } from '@angular/material/input';
+import { MatRippleModule } from '@angular/material/core';
+import { MatTooltipModule } from '@angular/material/tooltip';
+
 @NgModule({
   imports: [
     CommonModule,
