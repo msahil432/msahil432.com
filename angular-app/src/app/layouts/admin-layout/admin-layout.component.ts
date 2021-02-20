@@ -15,8 +15,8 @@ export class AdminLayoutComponent implements OnInit {
   private lastPoppedUrl: string;
   private yScrollStack: number[] = [];
 
-  public firstImage = '../assets/img/sidebar-' + this.getRandomNumber1to4() + '.jpg';
-  public secondImage = 'url(../assets/img/sidebar-' + this.getRandomNumber1to4() + '.jpg)';
+  public firstImage = './assets/img/sidebar-' + this.getRandomNumber1to4() + '.jpg';
+  public secondImage = 'url(./assets/img/sidebar-' + this.getRandomNumber1to4() + '.jpg)';
 
   constructor( public location: Location, private router: Router) {}
 
