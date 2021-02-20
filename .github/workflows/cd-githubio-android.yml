@@ -45,4 +45,9 @@ jobs:
         run: echo $DESTINATION_CLONED_DIRECTORY
   
       - name: Pushes to Android APP repository
-        run: ./push-to-android-repo.sh ${{ secrets.API_TOKEN_GITHUB }}
+        run: |
+          COMMIT_MESSAGE="See ORIGIN_COMMIT"
+          ORIGIN_COMMIT="https://github.com/$GITHUB_REPOSITORY/commit/$GITHUB_SHA"
+          COMMIT_MESSAGE="${COMMIT_MESSAGE/ORIGIN_COMMIT/$ORIGIN_COMMIT}"
+
+          ./push-to-android-repo.sh ${{ secrets.API_TOKEN_GITHUB }} $COMMIT_MESSAGE
