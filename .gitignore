@@ -1,15 +1,2 @@
-/angular-app/node_modules
-/angular-app/dist
-/android-app/build
-/android-app/captures
-*.iml
-/android-app/.gradle
-/android-app/local.properties
-/android-app/.idea/caches
-/android-app/.idea/libraries
-/android-app/.idea/modules.xml
-/android-app/.idea/workspace.xml
-/android-app/.idea/navEditor.xml
-/android-app/.idea/assetWizardSettings.xml
-.DS_Store
-.externalNativeBuild
+node_modules
+dist

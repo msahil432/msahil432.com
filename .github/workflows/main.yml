@@ -30,6 +30,4 @@ jobs:
         uses: actions/setup-node@v2.1.4
 
       - name: Install Dependencies and Build
-        run: |
-          cd ./angular-app
-          npm i
+        run: npm i
