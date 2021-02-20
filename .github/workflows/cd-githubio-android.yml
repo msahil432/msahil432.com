@@ -35,7 +35,7 @@ jobs:
         env:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
         with:
-          source-directory: 'angular-app/dist'
+          source-directory: 'dist'
           destination-github-username: 'msahil432'
           destination-repository-name: 'msahil432.github.io'
           user-email: dev@msahil432.com
