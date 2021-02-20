@@ -3,11 +3,11 @@ set -e  # if a command fails it stops the execution
 set -u  # script fails if trying to access to an undefined variable
 
 export API_TOKEN_GITHUB=$1
+export COMMIT_MESSAGE=$2
 
 
 echo "Starts"
 SOURCE_DIRECTORY="dist"
-COMMIT_MESSAGE="See ORIGIN_COMMIT"
 
 CLONE_DIR=$(mktemp -d)
 
@@ -30,9 +30,6 @@ echo "Files that will be pushed"
 ls -la
 
 echo "Adding git commit"
-
-ORIGIN_COMMIT="https://github.com/$GITHUB_REPOSITORY/commit/$GITHUB_SHA"
-COMMIT_MESSAGE="${COMMIT_MESSAGE/ORIGIN_COMMIT/$ORIGIN_COMMIT}"
 
 git add .
 git status
