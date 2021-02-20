@@ -15,7 +15,7 @@ export class ProfileDataService {
   public socialLinks = [
     {name:'LinkedIn', username:'msahil432',
     link:'https://linkedin.com/in/msahil432', 
-    image:'/assets/img/linkedin-icon.svg'
+    image:'./assets/img/linkedin-icon.svg'
   },
     {name:'Github', username:'msahil432', 
     link:'https://github.com/msahil432',
@@ -31,11 +31,11 @@ export class ProfileDataService {
   },
     {name:'Google Play', username:'msahil432', 
     link:'https://play.google.com/store/apps/dev?id=7803821373914286475',
-    image:'../assets/img/googleplay-icon.svg'
+    image:'./assets/img/googleplay-icon.svg'
   },
     {name:'Stack Overflow', username:'5634251', 
     link:'https://stackoverflow.com/users/5634251/sahil-malik', 
-    image:'../assets/img/stackoverflow-icon.svg'
+    image:'./assets/img/stackoverflow-icon.svg'
   },
   ];
   public links = [
