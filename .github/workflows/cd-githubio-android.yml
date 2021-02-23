@@ -46,8 +46,8 @@ jobs:
   
       - name: Pushes to Android APP repository
         run: |
-          COMMIT_MESSAGE="See ORIGIN_COMMIT"
-          ORIGIN_COMMIT="https://github.com/$GITHUB_REPOSITORY/commit/$GITHUB_SHA"
-          COMMIT_MESSAGE="${COMMIT_MESSAGE/ORIGIN_COMMIT/$ORIGIN_COMMIT}"
+          export COMMIT_MESSAGE="See ORIGIN_COMMIT"
+          export ORIGIN_COMMIT="https://github.com/$GITHUB_REPOSITORY/commit/$GITHUB_SHA"
+          export COMMIT_MESSAGE="${COMMIT_MESSAGE/ORIGIN_COMMIT/$ORIGIN_COMMIT}"
 
           ./push-to-android-repo.sh ${{ secrets.API_TOKEN_GITHUB }} $COMMIT_MESSAGE
