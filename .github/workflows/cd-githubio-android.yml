@@ -26,6 +26,10 @@ jobs:
 
       - name: Setup Node.js environment
         uses: actions/setup-node@v2.1.4
+      
+      - uses: actions/cache@v2
+        with:
+          path: node_modules
 
       - name: Install Dependencies and Build
         run: npm i
