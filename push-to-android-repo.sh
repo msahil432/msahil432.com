@@ -5,6 +5,8 @@ set -u  # script fails if trying to access to an undefined variable
 export API_TOKEN_GITHUB=$1
 export COMMIT_MESSAGE=$2
 
+echo $COMMIT_MESSAGE
+
 
 echo "Starts"
 SOURCE_DIRECTORY="dist"
