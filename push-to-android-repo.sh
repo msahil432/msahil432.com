@@ -26,6 +26,8 @@ cd "$CLONE_DIR"
 echo "Updating things for Cordova"
 ./prepare-for-cordova.sh
 
+cat ./www/index.html
+
 echo "Files that will be pushed"
 ls -la
 
