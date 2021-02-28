@@ -172,17 +172,25 @@ export class ProfileDataService {
 
   public demos = [
     {
+      name: 'Quantum Computing', icon: 'fas fa-newspaper', action: 'Read my paper on',
+      link: 'https://www.tandfonline.com/doi/full/10.1080/23335777.2020.1811384',
+      description: 'Leveraging the power of quantum computing for breaking RSA encryption'
+    },
+    {
       name: 'Plus SMS', icon:'fab fa-android', action:'Install',
       link: 'https://play.google.com/store/apps/details?id=com.msahil432.sms', 
-      description: 'Organize your sms into categories.'},
+      description: 'Organize your sms into categories.'
+    },
     {
       name: 'Click-Away', icon:'fab fa-android', action:'Install',
       link: 'https://play.google.com/store/apps/details?id=msahil432.click_away', 
-      description: 'Now, Your safekeepers are just a click away.'},
+      description: 'Now, Your safekeepers are just a click away.'
+    },
     {
       name: 'CricChat', icon:'fas fa-comment', action:'Chat with ',
       link: 'https://m.me/fastestscores',
-      description: 'Get latest cricket scores, right in Messenger.'},
+      description: 'Get latest cricket scores, right in Messenger.'
+    },
   ];
 
 }
