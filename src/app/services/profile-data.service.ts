@@ -17,7 +17,7 @@ export class ProfileDataService {
     link:'https://linkedin.com/in/msahil432', 
     image:'./assets/img/linkedin-icon.svg'
   },
-    {name:'Github', username:'msahil432', 
+    {name:'Github', username:'msahil432',
     link:'https://github.com/msahil432',
     image:'https://logo.clearbit.com/github.com?size=80'
   },
@@ -172,15 +172,15 @@ export class ProfileDataService {
 
   public demos = [
     {
-      name: 'Plus SMS', icon:'android', action:'Install',
+      name: 'Plus SMS', icon:'fab fa-android', action:'Install',
       link: 'https://play.google.com/store/apps/details?id=com.msahil432.sms', 
       description: 'Organize your sms into categories.'},
     {
-      name: 'Click-Away', icon:'android', action:'Install',
+      name: 'Click-Away', icon:'fab fa-android', action:'Install',
       link: 'https://play.google.com/store/apps/details?id=msahil432.click_away', 
       description: 'Now, Your safekeepers are just a click away.'},
     {
-      name: 'CricChat', icon:'chat', action:'Chat with ',
+      name: 'CricChat', icon:'fas fa-comment', action:'Chat with ',
       link: 'https://m.me/fastestscores',
       description: 'Get latest cricket scores, right in Messenger.'},
   ];
