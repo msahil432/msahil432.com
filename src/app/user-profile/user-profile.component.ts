@@ -1,4 +1,4 @@
-import { Component, OnInit} from '@angular/core';
+import { Component, OnDestroy, OnInit} from '@angular/core';
 
 import { CookieService } from 'ngx-cookie-service';
 
@@ -6,6 +6,8 @@ import { Router } from '@angular/router';
 import { AfterViewInit } from '@angular/core';
 
 import { ProfileDataService } from './../services/profile-data.service';
+import { fromEvent } from 'rxjs';
+import { debounceTime } from 'rxjs/operators';
 
 declare var $: any;
 
@@ -15,7 +17,12 @@ declare var $: any;
   styleUrls: ['./user-profile.component.css'],
 })
 
-export class UserProfileComponent implements OnInit, AfterViewInit {
+export class UserProfileComponent implements OnInit, AfterViewInit, OnDestroy {
+
+  public showScrollTop = false;
+  public techs : any;
+
+  private scrollSubscription: any;
 
   constructor(private cookieService : CookieService,
     private router: Router,
@@ -75,13 +82,27 @@ export class UserProfileComponent implements OnInit, AfterViewInit {
       let el = document.getElementById(hash+"_ql");
       el.click();
     }
+    this.scrollSubscription = fromEvent(window, 'scroll').pipe(
+      debounceTime(150),
+    ).subscribe(() => {
+      const element = document.getElementById('aboutMeCard');
+      if (element.getBoundingClientRect().top < 0 && !this.showScrollTop) {
+        this.showScrollTop = true;
+      } else if (element.getBoundingClientRect().top > 0 && this.showScrollTop) {
+        this.showScrollTop = false;
+      }
+    });
   }
 
-  public techs;
-
-  scrollMe(id: string) {
+  scrollMe(id: string, scrollToTop = false) {
     const el = document.getElementById(id);
-    const scrollTop = $(el).offset().top - 25;
+    const scrollTop = scrollToTop ? 0 : ($(el).offset().top - 25);
     $('html, body').animate({ scrollTop }, 1500);
+  }
+
+  ngOnDestroy() {
+    if (this.scrollSubscription) {
+      this.scrollSubscription.unsubscribe();
+    }
   }
 }
