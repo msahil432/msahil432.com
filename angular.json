@@ -32,7 +32,8 @@
               "./src/styles.css",
               "./node_modules/bootstrap/dist/css/bootstrap.css",
               "./node_modules/perfect-scrollbar/css/perfect-scrollbar.css",
-              "./src/assets/scss/material-dashboard.scss"
+              "./src/assets/scss/material-dashboard.scss",
+              "./node_modules/@fortawesome/fontawesome-free/css/all.css"
             ],
             "scripts": [
               "./node_modules/jquery/dist/jquery.js",
