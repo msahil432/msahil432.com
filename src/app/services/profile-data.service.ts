@@ -44,8 +44,8 @@ export class ProfileDataService {
     {name:'Download CV', link:'https://go.msahil432.com/cv'},
   ];
   public experience = [
-    { company: 'Software Developer, Compro Technologies Pvt Ltd', time: 'June 2019 - Currently',
-      details: 'Working as Full Stack (huh, Angular mostly ;_;) Developer.' },
+    { company: 'Senior Software Engineer, Compro Technologies Pvt Ltd', time: 'June 2019 - Currently',
+      details: 'Working as Full Stack Developer, working with Server & Serverless architecure with NodeJS, AWS SAM [Lambda, CF, SNS], Angular 5, Express & Redis' },
     { company: 'Android Intern, PenPencil', time: 'July 2018 - 8 Weeks',
       details: 'Worked as Android Application Developer for In-Office internship of 8 Weeks. Worked on 3 Android Projects.' },
     { company: 'Software Intern, MyMovieRack.com', time: 'July 2017 - 6 Weeks',
