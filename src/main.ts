@@ -8,10 +8,20 @@ if (environment.production) {
   enableProdMode();
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-  platformBrowserDynamic().bootstrapModule(AppModule).then(() => {
+window.document.addEventListener('DOMContentLoaded', () => {
+  function bootstrap() {
+     platformBrowserDynamic().bootstrapModule(AppModule).then(() => {
     if ('serviceWorker' in navigator && environment.production) {
       navigator.serviceWorker.register('ngsw-worker.js');
     }
   }).catch(err => console.log(err));
+   };
+
+
+ if (window.document.readyState === 'complete') {
+   bootstrap();
+ } else {
+   window.document.addEventListener('DOMContentLoaded', bootstrap);
+ }
+ 
 });

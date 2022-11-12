@@ -23,15 +23,15 @@ export class AdminLayoutComponent implements OnInit {
   ngOnInit() {
       const isWindows = navigator.platform.indexOf('Win') > -1 ? true : false;
 
-      if (isWindows && !document.getElementsByTagName('body')[0].classList.contains('sidebar-mini')) {
+      if (isWindows && !window.document.getElementsByTagName('body')[0].classList.contains('sidebar-mini')) {
           // if we are on windows OS we activate the perfectScrollbar function
 
-          document.getElementsByTagName('body')[0].classList.add('perfect-scrollbar-on');
+          window.document.getElementsByTagName('body')[0].classList.add('perfect-scrollbar-on');
       } else {
-          document.getElementsByTagName('body')[0].classList.remove('perfect-scrollbar-off');
+          window.document.getElementsByTagName('body')[0].classList.remove('perfect-scrollbar-off');
       }
-      const elemMainPanel = document.querySelector('.main-panel');
-      const elemSidebar = document.querySelector('.sidebar .sidebar-wrapper');
+      const elemMainPanel = window.document.querySelector('.main-panel');
+      const elemSidebar = window.document.querySelector('.sidebar .sidebar-wrapper');
 
       this.location.subscribe((ev:PopStateEvent) => {
           this.lastPoppedUrl = ev.url;
@@ -74,7 +74,7 @@ export class AdminLayoutComponent implements OnInit {
   }
   runOnRouteChange(): void {
     if (window.matchMedia(`(min-width: 960px)`).matches && !this.isMac()) {
-      const elemMainPanel = document.querySelector('.main-panel');
+      const elemMainPanel = window.document.querySelector('.main-panel');
       const ps = new PerfectScrollbar(elemMainPanel as HTMLElement);
       ps.update();
     }

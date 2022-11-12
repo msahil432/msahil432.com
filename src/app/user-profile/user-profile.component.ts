@@ -79,13 +79,13 @@ export class UserProfileComponent implements OnInit, AfterViewInit, OnDestroy {
     if(this.router.url.indexOf("#") != -1){
       var hash = this.router.url.substring(this.router.url.indexOf("#")+1);
       this.scrollMe(hash);
-      let el = document.getElementById(hash+"_ql");
+      let el = window.document.getElementById(hash+"_ql");
       el.click();
     }
     this.scrollSubscription = fromEvent(window, 'scroll').pipe(
       debounceTime(150),
     ).subscribe(() => {
-      const element = document.getElementById('aboutMeCard');
+      const element = window.document.getElementById('aboutMeCard');
       if (element.getBoundingClientRect().top < 0 && !this.showScrollTop) {
         this.showScrollTop = true;
       } else if (element.getBoundingClientRect().top > 0 && this.showScrollTop) {
@@ -95,7 +95,7 @@ export class UserProfileComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   scrollMe(id: string, scrollToTop = false) {
-    const el = document.getElementById(id);
+    const el = window.document.getElementById(id);
     const scrollTop = scrollToTop ? 0 : ($(el).offset().top - 25);
     $('html, body').animate({ scrollTop }, 1500);
   }

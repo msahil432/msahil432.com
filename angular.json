@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist",
+            "outputPath": "dist/msahil432-dot-com/browser",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -107,6 +107,65 @@
               "src/assets"
             ]
           }
+        },
+        "server": {
+          "builder": "@angular-devkit/build-angular:server",
+          "options": {
+            "outputPath": "dist/msahil432-dot-com/server",
+            "main": "src/server.ts",
+            "tsConfig": "src/tsconfig.server.json",
+            "optimization": false,
+            "sourceMap": true,
+            "extractLicenses": false
+          },
+          "configurations": {
+            "production": {
+              "outputHashing": "media",
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "sourceMap": false,
+              "extractLicenses": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve-ssr": {
+          "builder": "@nguniversal/builders:ssr-dev-server",
+          "configurations": {
+            "development": {
+              "browserTarget": "msahil432-dot-com:build",
+              "serverTarget": "msahil432-dot-com:server"
+            },
+            "production": {
+              "browserTarget": "msahil432-dot-com:build:production",
+              "serverTarget": "msahil432-dot-com:server:production"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "prerender": {
+          "builder": "@nguniversal/builders:prerender",
+          "options": {
+            "routes": [
+              "/"
+            ]
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "msahil432-dot-com:build:production",
+              "serverTarget": "msahil432-dot-com:server:production"
+            },
+            "development": {
+              "browserTarget": "msahil432-dot-com:build:development",
+              "serverTarget": "msahil432-dot-com:server:development"
+            }
+          },
+          "defaultConfiguration": "production"
         }
       }
     },
