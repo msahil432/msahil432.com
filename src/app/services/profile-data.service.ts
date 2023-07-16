@@ -7,7 +7,7 @@ export class ProfileDataService {
 
   public name = 'Sahil Malik';
   public tag = 'Getting Things Done!';
-  public moto = 'Everything can be improved, Why not code?!';
+  public moto = '4 years experience of working as a Full Stack Developer, creating responsive and accessible single page applications using Angular, React, Redux, TypeScript, Express.JS, NodeJS, Redis, SCSS/SASS, Bootstrap and VueJS. Also, experience of 2 years of designing and developing ServerLess Services with AWS SAM [Lambda, S3, CloudFront, SNS, SQS, CloudFormation, SES, API Gateway, etc]';
   public qualities = [
     'Hard Working', 'Can Work under Pressure',
     'Tech Savy', 'Honest', 'Friendly and Team Member', 'Loves Astrophysics'
@@ -44,8 +44,10 @@ export class ProfileDataService {
     {name:'Download CV', link:'https://go.msahil432.com/cv'},
   ];
   public experience = [
-    { company: 'Senior Software Engineer, Compro Technologies Pvt Ltd', time: 'June 2019 - Currently',
-      details: 'Working as Full Stack Developer, working with Server & Serverless architecure with NodeJS, AWS SAM [Lambda, CF, SNS], Angular 5, Express & Redis' },
+    {
+      company: 'Senior Software Engineer, Compro Technologies Pvt Ltd', time: 'June 2019 - Currently',
+      details: 'Full Stack Developer, work responsibilities include: - Designing Server & ServerLess Systems depending upon the computing needs, for example, an event driven approach to offload heavy computing tasks. - Creating responsive UI/UX within Angular (with Bootstrap and SCSS) with Cross browser compatibility, making sure the user gets consistent behavior on all browsers and devices. - Writing ExpressJS functions to support the FrontEnd and integrating with other backend services like in-house DLS systems as well as outside services like AWS, GetStream, PubNub, Heroku etc. - Collaborating within team and across teams as well as mentoring new team members'
+    },
     { company: 'Android Intern, PenPencil', time: 'July 2018 - 8 Weeks',
       details: 'Worked as Android Application Developer for In-Office internship of 8 Weeks. Worked on 3 Android Projects.' },
     { company: 'Software Intern, MyMovieRack.com', time: 'July 2017 - 6 Weeks',
