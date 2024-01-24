@@ -57,9 +57,7 @@
             <h3 class="title">{{item.company}}</h3>
             <p class="category">{{item.time}}</p>
             <blockquote [innerHtml]="item.details"></blockquote>
-        </div>
-        <div *ngIf="item.tech?.length" class="card-footer">
-            <div class="container-fluid">
+            <div *ngIf="item.tech?.length" class="container-fluid">
                 <div class="row">
                     <div class="col-md-4" *ngFor="let techs of item.tech">
                         <span class="tech-span">{{techs}}</span>
