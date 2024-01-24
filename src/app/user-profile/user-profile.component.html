@@ -38,7 +38,7 @@
             <h4 class="card-title">About Me</h4>
         </div>
         <div class="card-body">
-            <blockquote>{{profileData.moto}}</blockquote>
+            <blockquote [innerHtml]="profileData.moto"></blockquote>
         </div>
         <div class="card-footer row pt-0">
             <div class="col-md-4" *ngFor="let quality of profileData.qualities">
@@ -56,7 +56,16 @@
         <div class="card-body" *ngFor="let item of profileData.experience">
             <h3 class="title">{{item.company}}</h3>
             <p class="category">{{item.time}}</p>
-            <blockquote>{{item.details}}</blockquote>
+            <blockquote [innerHtml]="item.details"></blockquote>
+        </div>
+        <div *ngIf="item.tech?.length" class="card-footer">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-4" *ngFor="let techs of item.tech">
+                        <span class="tech-span">{{techs}}</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <div class="card" id="education">
@@ -67,7 +76,7 @@
             <h3 class="title">{{item.degree}}</h3>
             <h4 class="title">{{item.institute}}</h4>
             <p class="category">{{item.time}}</p>
-            <blockquote>{{item.details}}</blockquote>
+            <blockquote [innerHtml]="item.details"></blockquote>
         </div>
     </div>
     <div class="card">
@@ -76,7 +85,7 @@
         </div>
         <div class="card-body" *ngFor="let item of profileData.qualifications">
             <h3 class="title">{{item.name}}</h3>
-            <blockquote>{{item.details}}</blockquote>
+            <blockquote [innerHtml]="item.details"></blockquote>
         </div>
     </div>
     <div class="card" id="awards">
@@ -85,7 +94,7 @@
         </div>
         <div class="card-body" *ngFor="let item of profileData.awards">
             <h3 class="title">{{item.name}}</h3>
-            <blockquote>{{item.details}}</blockquote>
+            <blockquote [innerHtml]="item.details"></blockquote>
         </div>
     </div>
     <div class="card">
@@ -94,7 +103,7 @@
         </div>
         <div class="card-body" *ngFor="let item of profileData.extraCurricular">
             <h3 class="title">{{item.name}}</h3>
-            <blockquote>{{item.details}}</blockquote>
+            <blockquote [innerHtml]="item.details"></blockquote>
         </div>
     </div>
     <div class="card">
@@ -103,7 +112,7 @@
         </div>
         <div class="card-body" *ngFor="let item of profileData.memberships">
             <h3 class="title">{{item.name}}</h3>
-            <blockquote>{{item.details}}</blockquote>
+            <blockquote [innerHtml]="item.details"></blockquote>
         </div>
     </div>       
     
@@ -118,7 +127,7 @@
                     <a href="{{item.link}}" target="_blank" rel="noopener noreferrer"><h3 class="title">{{item.name}}</h3></a>
                     <h4>{{item.slogan}}</h4>
                     <p class="category">{{item.time}}</p>
-                    <blockquote>{{item.details}}</blockquote>
+                    <blockquote [innerHtml]="item.details"></blockquote>
                 </div>
                 <div class="card-footer">
                     <div class="container-fluid">

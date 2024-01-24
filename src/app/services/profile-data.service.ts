@@ -7,7 +7,7 @@ export class ProfileDataService {
 
   public name = 'Sahil Malik';
   public tag = 'Getting Things Done!';
-  public moto = '4 years experience of working as a Full Stack Developer, creating responsive and accessible single page applications using Angular, React, Redux, TypeScript, Express.JS, NodeJS, Redis, SCSS/SASS, Bootstrap and VueJS. Also, experience of 2 years of designing and developing ServerLess Services with AWS SAM [Lambda, S3, CloudFront, SNS, SQS, CloudFormation, SES, API Gateway, etc]';
+  public moto = 'As a Senior Software Engineer at Compro Technologies, I design and develop responsive and accessible single page applications using Angular, TypeScript, Express.JS, NodeJS, Redis, SCSS/SASS, Bootstrap and VueJS. I also create ServerLess systems using AWS SAM, leveraging services such as Lambda, S3, CloudFront, SNS, SQS, CloudFormation, SES, API Gateway, and more. I have been working with Compro since June 2019, starting as an Associate Software Engineer and progressing to a Software Engineer and then a Senior Software Engineer. <br> I have a Bachelor of Technology in Computer Science from Maharaja Agrasen Institute of Technology, and a Diploma in Computer Engineering from Guru Nanak Dev Institute of Technology, Rohini. I have also completed several online courses and certifications on Java, Android, and Spanish. I am passionate about learning new technologies and languages, and I enjoy collaborating with my team and across teams, as well as mentoring new team members. I strive to deliver high-quality and user-friendly solutions that meet the needs and expectations of the clients and the end-users.';
   public qualities = [
     'Hard Working', 'Can Work under Pressure',
     'Tech Savy', 'Honest', 'Friendly and Team Member', 'Loves Astrophysics'
@@ -41,12 +41,25 @@ export class ProfileDataService {
   public links = [
     {name:'Back to Top', link:'#'},
     {name:'Download Resume', link:'https://go.msahil432.com/resume'},
-    {name:'Download CV', link:'https://go.msahil432.com/cv'},
+    // {name:'Download CV', link:'https://go.msahil432.com/cv'},
   ];
   public experience = [
     {
       company: 'Senior Software Engineer, Compro Technologies Pvt Ltd', time: 'June 2019 - Currently',
-      details: 'Full Stack Developer, work responsibilities include: - Designing Server & ServerLess Systems depending upon the computing needs, for example, an event driven approach to offload heavy computing tasks. - Creating responsive UI/UX within Angular (with Bootstrap and SCSS) with Cross browser compatibility, making sure the user gets consistent behavior on all browsers and devices. - Writing ExpressJS functions to support the FrontEnd and integrating with other backend services like in-house DLS systems as well as outside services like AWS, GetStream, PubNub, Heroku etc. - Collaborating within team and across teams as well as mentoring new team members'
+      details: `
+        Full Stack Developer, work responsibilities include:
+        <ul>
+          <li> Designing Server & ServerLess Systems depending upon the computing needs, for example, an event driven approach to offload heavy computing tasks.</li>
+          <li> Creating responsive UI/UX within Angular (with Bootstrap and SCSS) with Cross browser compatibility, making sure the user gets consistent behavior on all browsers and devices.</li>
+          <li> Writing ExpressJS functions to support the FrontEnd and integrating with other backend services like in-house DLS systems as well as outside services like AWS, GetStream, PubNub, Heroku etc.</li>
+          <li> Collaborating within team and across teams as well as mentoring new team members</li>
+        <ul>
+      `,
+      tech: [
+        'Node.js', 'Angular', 'Amazon Web Services (AWS)', 'DevOps', 'Full-Stack Development',
+        'Responsive Web Design', 'Agile Development', 'Critical Thinking', 'Communication', 'Web Applications', 'Requirements Analysis',
+        'Agile Methodologies', 'Decision-Making', 'Mentoring', 'Serverless Computing', 'Microservices', 'Leadership'
+      ]
     },
     { company: 'Android Intern, PenPencil', time: 'July 2018 - 8 Weeks',
       details: 'Worked as Android Application Developer for In-Office internship of 8 Weeks. Worked on 3 Android Projects.' },
